@@ -1,3 +1,7 @@
+---
+description: Information about PowerShell Universal variables.
+---
+
 # Variables
 
 Variables allow for the global definition of variables that are available within scripts. You can also import secrets that are also available within scripts or as run as credentials.
@@ -25,6 +29,14 @@ From this dialog, you'll be able to define string and PSCredentials in the speci
 ### Credential Format
 
 In some environments, it may be necessary to specify the domain name in the user name field. You can specify in either the `domain\user` or `user@domain` format. If you do not do so, you will receive errors when attempting to start processes, like scripts or dashboards, as that user account.
+
+### Roles
+
+Secret variables can include role-based access. Roles limit who can use the secret in their scripts and as run as credentials.&#x20;
+
+{% hint style="warning" %}
+If a role is specified on a secret, the secret will not be available in scheduled scripts.&#x20;
+{% endhint %}
 
 ## Vaults
 
