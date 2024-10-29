@@ -91,10 +91,24 @@ OUTPUTS
     -------------------------- EXAMPLE 3 --------------------------
     
     PS >New-UDEditor -Id 'editor3' -OnChange {
-    PS >     Show-UDToast ($EventData | ConvertTo-Json)
+    PS >     Show-UDToast $Body
     PS > }
     
     OnChange|An editor with an OnChange script block.
+    
+    
+    
+    
+    -------------------------- EXAMPLE 4 --------------------------
+    
+    PS >New-UDEditor -Format html -OnChange {
+    PS >     Set-UDElement -Id 'test' -Content {
+    PS >         $body
+    PS >     }
+    PS > } 
+    PS > New-UDElement -Tag pre -Id 'test'
+    
+    HTML|An editor that updates a pre tag with the HTML content.
     
     
     
