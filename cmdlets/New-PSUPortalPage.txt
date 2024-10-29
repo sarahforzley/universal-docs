@@ -3,7 +3,7 @@ NAME
     New-PSUPortalPage
     
 SYNTAX
-    New-PSUPortalPage -Name <string> [-Description <string>] [-Widget <PortalComponentInstance[]>] [-Authenticated] [-Role <string[]>] [-ComputerName <string>] [-AppToken <string>] [-Credential <pscredential>] [-UseDefaultCredentials] [-Integrated] [<CommonParameters>]
+    New-PSUPortalPage -Name <string> [-Description <string>] [-Widget <PortalComponentInstance[]>] [-Authenticated] [-Role <string[]>] [-ComputerName <string>] [-AppToken <string>] [-Credential <pscredential>] [-UseDefaultCredentials] [-Integrated] [-TrustCertificate] [<CommonParameters>]
     
     
 PARAMETERS
@@ -78,6 +78,16 @@ PARAMETERS
         Accept wildcard characters?  false
         
     -Role <string[]>
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TrustCertificate
         
         Required?                    false
         Position?                    Named

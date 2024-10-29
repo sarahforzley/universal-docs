@@ -389,8 +389,8 @@ OUTPUTS
     PS >         rowCount = $Data.Length
     PS >     }
     PS > } -Columns @(
-    PS >     @{ field = "Name"; editable = $true }
-    PS >     @{ field = "number" ; editable = $true }
+    PS >     New-UDDataGridColumn -Field 'Name' -Editable
+    PS >     New-UDDataGridColumn -Field 'Number' -Editable
     PS > ) -OnEdit {
     PS >     Show-UDToast "Editing $Body" 
     PS > } -Id 'dataGrid5'
@@ -418,8 +418,6 @@ OUTPUTS
     PS > ) -Id 'dataGrid6'
     
     Column Options|
-    
-    [Component("Data Grid", "Table", "Creates a new card.")]
     
     
     

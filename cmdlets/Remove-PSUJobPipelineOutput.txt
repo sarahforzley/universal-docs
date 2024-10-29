@@ -3,7 +3,7 @@ NAME
     Remove-PSUJobPipelineOutput
     
 SYNTAX
-    Remove-PSUJobPipelineOutput -JobId <long> [-ComputerName <string>] [-AppToken <string>] [-Credential <pscredential>] [-UseDefaultCredentials] [-Integrated] [<CommonParameters>]
+    Remove-PSUJobPipelineOutput -JobId <long> [-ComputerName <string>] [-AppToken <string>] [-Credential <pscredential>] [-UseDefaultCredentials] [-Integrated] [-TrustCertificate] [<CommonParameters>]
     
     
 PARAMETERS
@@ -53,6 +53,16 @@ PARAMETERS
         Position?                    Named
         Accept pipeline input?       true (ByValue)
         Parameter set name           ById
+        Aliases                      None
+        Dynamic?                     false
+        Accept wildcard characters?  false
+        
+    -TrustCertificate
+        
+        Required?                    false
+        Position?                    Named
+        Accept pipeline input?       false
+        Parameter set name           (All)
         Aliases                      None
         Dynamic?                     false
         Accept wildcard characters?  false
