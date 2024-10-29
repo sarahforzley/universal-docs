@@ -73,4 +73,4 @@ New-UDUpload -Text 'Upload Image' -OnUpload {
 
 ## API
 
-[**New-UDUpload**](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDUpload.txt)
+[**New-UDUpload**](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDUpload.txt)

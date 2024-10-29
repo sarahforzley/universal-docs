@@ -63,4 +63,4 @@ New-UDDatePicker -Views "day" -MinimumDate $MinDate -MaximumDate $MaxDate
 
 ## API
 
-* [New-UDDatePicker](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDDatePicker.txt)
+* [New-UDDatePicker](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDDatePicker.txt)

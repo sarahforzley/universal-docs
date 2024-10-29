@@ -44,7 +44,7 @@ Variables are listed on the [variables page](../platform/variables.md#api).
 
 ## API
 
-* [New-PSUEndpoint](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-PSUEndpoint.txt)
-* [Get-PSUEndpoint](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Get-PSUEndpoint.txt)
-* [Remove-PSUEndpoint](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Universal/Remove-PSUEndpoint.md)
-* [Set-UASetting](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Universal/Set-UASetting.md)
+* [New-PSUEndpoint](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-PSUEndpoint.txt)
+* [Get-PSUEndpoint](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Get-PSUEndpoint.txt)
+* [Remove-PSUEndpoint](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Universal/Remove-PSUEndpoint.md)
+* [Set-UASetting](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Universal/Set-UASetting.md)

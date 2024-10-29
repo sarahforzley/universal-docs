@@ -57,5 +57,5 @@ New-PSUPublishedFolder -Path C:\website -RequestPath /docs -DefaultDocument @("i
 
 ## API&#x20;
 
-* [New-PSUPublishedFolder](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-PSUPublishedFolder.txt)
+* [New-PSUPublishedFolder](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-PSUPublishedFolder.txt)
 

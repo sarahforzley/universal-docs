@@ -116,6 +116,6 @@ The Random Delay property causes a schedule to start anywhere between 0 and 60 s
 
 ## API
 
-* [New-PSUSchedule](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-PSUSchedule.txt)
-* [Get-PSUSchedule](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Get-PSUSchedule.txt)
-* [Remove-PSUSchedule](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Remove-PSUSchedule.txt)
+* [New-PSUSchedule](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-PSUSchedule.txt)
+* [Get-PSUSchedule](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Get-PSUSchedule.txt)
+* [Remove-PSUSchedule](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Remove-PSUSchedule.txt)

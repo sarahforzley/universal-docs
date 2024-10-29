@@ -40,4 +40,4 @@ New-UDButton -Text 'Click' -OnClick {
 
 ## API
 
-* [New-UDSwitch](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDSwitch.txt)
+* [New-UDSwitch](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDSwitch.txt)

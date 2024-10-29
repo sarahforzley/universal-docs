@@ -92,5 +92,5 @@ New-UDButton -Text 'Styling' -OnClick {
 
 ## API
 
-* [Show-UDModal](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Show-UDModal.txt)
-* [Hide-UDModal](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Hide-UDModal.txt)
+* [Show-UDModal](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Show-UDModal.txt)
+* [Hide-UDModal](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Hide-UDModal.txt)

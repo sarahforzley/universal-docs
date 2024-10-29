@@ -67,5 +67,5 @@ New-UDSlider -OnChange {
 
 ## API
 
-* [New-UDSlider](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDSlider.txt)
+* [New-UDSlider](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDSlider.txt)
 

@@ -114,4 +114,4 @@ New-UDSwitch -OnChange {
 
 ## API
 
-* [New-UDTransition](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDTransition.txt)
+* [New-UDTransition](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDTransition.txt)

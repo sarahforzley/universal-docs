@@ -70,4 +70,4 @@ New-UDButton -Text 'Get Value' -OnClick {
 
 ## API
 
-* [New-UDCheckbox](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDCheckBox.txt)
+* [New-UDCheckbox](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDCheckBox.txt)

@@ -196,6 +196,6 @@ You can learn more about [Windows PowerShell Compatibility here](https://learn.m
 
 ## API
 
-* [New-PSUEnvironment](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-PSUEnvironment.txt)
-* [Get-PSUEnvironment](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Get-PSUEnvironment.txt)
-* [Remove-PSUEnvironment](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Remove-PSUEnvironment.txt)
+* [New-PSUEnvironment](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-PSUEnvironment.txt)
+* [Get-PSUEnvironment](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Get-PSUEnvironment.txt)
+* [Remove-PSUEnvironment](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Remove-PSUEnvironment.txt)

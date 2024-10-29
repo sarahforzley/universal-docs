@@ -111,4 +111,4 @@ New-UDTextbox -OnValidate {
 
 ## API
 
-[New-UDTextbox](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDTextbox.txt)
+[New-UDTextbox](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDTextbox.txt)

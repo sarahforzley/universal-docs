@@ -46,4 +46,4 @@ New-UDChip -Label 'OnDelete' -OnClick {
 
 ## **API**
 
-[New-UDChip](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDChip.txt)
+[New-UDChip](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDChip.txt)

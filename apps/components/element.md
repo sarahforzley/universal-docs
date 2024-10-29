@@ -142,12 +142,12 @@ New-UDButton -Text 'Click Me' -OnClick {
 
 ## API
 
-* [**Get-UDElement**](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Get-UDElement.txt)\*\*\*\*
-* [**Set-UDElement**](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Set-UDElement.txt)
-* [**Remove-UDElement**](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Remove-UDElement.txt)
-* [**Add-UDElement**](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Add-UDElement.txt)
-* [**Clear-UDElement**](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Clear-UDElement.txt)
-* [**Sync-UDElement**](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Sync-UDElement.txt)
-* \*\*\*\*[**Select-UDElement**](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Select-UDElement.txt)
+* [**Get-UDElement**](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Get-UDElement.txt)\*\*\*\*
+* [**Set-UDElement**](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Set-UDElement.txt)
+* [**Remove-UDElement**](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Remove-UDElement.txt)
+* [**Add-UDElement**](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Add-UDElement.txt)
+* [**Clear-UDElement**](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Clear-UDElement.txt)
+* [**Sync-UDElement**](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Sync-UDElement.txt)
+* \*\*\*\*[**Select-UDElement**](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Select-UDElement.txt)
 
 ***

@@ -32,5 +32,5 @@ New-UDFloatingActionButton -Icon (New-UDIcon -Icon user) -OnClick {
 
 ## API
 
-* [New-UDFloatingActionButton](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDFloatingActionButton.txt)
+* [New-UDFloatingActionButton](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDFloatingActionButton.txt)
 

@@ -87,5 +87,5 @@ Write-Host $Cache:MyValue
 
 ## API
 
-* [Get-PSUCache](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Get-PSUCache.txt)
-* [Set-PSUCache](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Set-PSUCache.txt)
+* [Get-PSUCache](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Get-PSUCache.txt)
+* [Set-PSUCache](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Set-PSUCache.txt)

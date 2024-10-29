@@ -173,7 +173,7 @@ The function will be surfaced just as other scripts within the admin console. Pa
 
 ## API
 
-* [New-PSUScript](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-PSUScript.txt)
-* [Remove-PSUScript](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Remove-PSUScript.txt)
-* [Set-PSUScript](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Set-PSUScript.txt)
-* [Get-PSUScript](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Get-PSUScript.txt)
+* [New-PSUScript](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-PSUScript.txt)
+* [Remove-PSUScript](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Remove-PSUScript.txt)
+* [Set-PSUScript](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Set-PSUScript.txt)
+* [Get-PSUScript](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Get-PSUScript.txt)

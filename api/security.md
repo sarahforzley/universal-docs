@@ -84,8 +84,8 @@ JWT app tokens will use the role that was defined when they were generated.
 
 ## API
 
-* [New-PSUEndpoint](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-PSUEndpoint.txt)
-* [Get-PSUEndpoint](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Get-PSUEndpoint.txt)
-* [Remove-PSUEndpoint](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Remove-PSUEndpoint.txt)
-* [New-PSUApiResponse](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-PSUApiResponse.txt)
-* [Set-PSUSetting](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Set-PSUSetting.txt)
+* [New-PSUEndpoint](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-PSUEndpoint.txt)
+* [Get-PSUEndpoint](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Get-PSUEndpoint.txt)
+* [Remove-PSUEndpoint](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Remove-PSUEndpoint.txt)
+* [New-PSUApiResponse](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-PSUApiResponse.txt)
+* [Set-PSUSetting](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Set-PSUSetting.txt)

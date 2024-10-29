@@ -87,5 +87,5 @@ New-UDRow -Columns {
 
 ## API
 
-* [New-UDGrid](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDGrid.txt)
+* [New-UDGrid](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDGrid.txt)
 

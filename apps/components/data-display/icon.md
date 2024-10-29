@@ -111,5 +111,5 @@ New-UDDynamic -Id 'icons' -Content {
 
 ## API
 
-[**New-UDIcon**](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDIcon.txt)
+[**New-UDIcon**](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDIcon.txt)
 

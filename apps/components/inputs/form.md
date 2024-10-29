@@ -295,5 +295,5 @@ New-UDForm -Script "Script.ps1" -OutputType 'text'
 
 ## API
 
-* [New-UDForm](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDForm.txt)
-* [New-UDFormValidationResult](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDValidationResult.txt)
+* [New-UDForm](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDForm.txt)
+* [New-UDFormValidationResult](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDValidationResult.txt)

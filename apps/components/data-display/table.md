@@ -696,7 +696,7 @@ $data = 1..10 | % { [PSCustomObject]@{ Item = $_}}
 
 ## API
 
-* [New-UDTable](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDTable.txt)
-* [New-UDTableColumn](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDTableColumn.txt)
-* [Out-UDTableColumn](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Out-UDTableData.txt)
-* [New-UDTableTextOption](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDTableTextOption.txt)
+* [New-UDTable](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDTable.txt)
+* [New-UDTableColumn](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDTableColumn.txt)
+* [Out-UDTableColumn](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Out-UDTableData.txt)
+* [New-UDTableTextOption](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDTableTextOption.txt)

@@ -20,4 +20,4 @@ If any error is thrown from the content, you will see an error such as thing.
 
 ## API
 
-[**New-UDErrorBoundary**](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDErrorBoundary.txt)
+[**New-UDErrorBoundary**](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDErrorBoundary.txt)

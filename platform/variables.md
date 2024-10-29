@@ -329,7 +329,7 @@ $Manual = $UAJob.Schedule -eq $null -and $UAJob.Trigger -eq $null
 
 ## API
 
-* [New-PSUVariable](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-PSUVariable.txt)
-* [Get-PSUVariable](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Get-PSUVariable.txt)
-* [Remove-PSUVariable](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Remove-PSUVariable.txt)
-* [Set-PSUVariable](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Set-PSUVariable.txt)
+* [New-PSUVariable](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-PSUVariable.txt)
+* [Get-PSUVariable](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Get-PSUVariable.txt)
+* [Remove-PSUVariable](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Remove-PSUVariable.txt)
+* [Set-PSUVariable](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Set-PSUVariable.txt)

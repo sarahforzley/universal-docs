@@ -55,4 +55,4 @@ New-UDHidden -Only @('sm', 'xl') -Content {
 
 ## API
 
-* [New-UDHidden](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDHidden.txt)
+* [New-UDHidden](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDHidden.txt)

@@ -72,4 +72,4 @@ Sometimes refreshing a dynamic component may take some time. For example, if you
 
 ## API
 
-[New-UDDynamic](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDDynamic.txt)
+[New-UDDynamic](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDDynamic.txt)

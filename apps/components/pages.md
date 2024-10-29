@@ -388,4 +388,4 @@ New-UDPage -Name 'Static Page' -Content {
 
 ## API
 
-[New-UDPage](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDPage.txt)
+[New-UDPage](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDPage.txt)

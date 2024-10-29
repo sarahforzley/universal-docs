@@ -60,5 +60,5 @@ New-UDMenu -Text 'Click Me' -OnChange {
 
 ## API
 
-* [New-UDMenu](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDMenu.txt)
-* [New-UDMenuItem](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDMenuItem.txt)
+* [New-UDMenu](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDMenu.txt)
+* [New-UDMenuItem](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDMenuItem.txt)

@@ -53,5 +53,5 @@ New-PSUEndpoint -Url '/process' -Method Get -Endpoint {
 
 ## API
 
-* [New-UDEndpoint](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDEndpoint.txt)
-* [New-UDEndpointSchedule](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDEndpointSchedule.txt)
+* [New-UDEndpoint](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDEndpoint.txt)
+* [New-UDEndpointSchedule](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDEndpointSchedule.txt)

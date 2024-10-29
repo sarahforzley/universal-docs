@@ -46,5 +46,5 @@ To disable rate limiting for particular IP Addresses, clients and endpoints you 
 
 ## API
 
-* [New-PSURateLimit](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-PSURateLimit.txt)
-* [Set-PSUSetting](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Set-PSUSetting.txt)
+* [New-PSURateLimit](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-PSURateLimit.txt)
+* [Set-PSUSetting](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Set-PSUSetting.txt)

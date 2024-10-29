@@ -14,4 +14,4 @@ New-UDHtml -Markup "<ul><li>First</li><li>Second</li><li>Third</li></ul>"
 
 ## API
 
-[**New-UDHtml**](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDHtml.txt)
+[**New-UDHtml**](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDHtml.txt)

@@ -44,4 +44,4 @@ Resulting output: 13 de septiembre de 2022 7:30
 
 ## API
 
-[**New-UDDateTime**](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDDateTime.txt)
+[**New-UDDateTime**](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDDateTime.txt)

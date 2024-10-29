@@ -56,6 +56,6 @@ New-UDTabs -Tabs {
 
 ## API
 
-* [New-UDTabs](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDStepper.txt)
-* [New-UDTab](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDTab.txt)
+* [New-UDTabs](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDStepper.txt)
+* [New-UDTab](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDTab.txt)
 

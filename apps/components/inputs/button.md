@@ -102,4 +102,4 @@ New-UDButton -Id "btn1" -OnClick {
 
 ## API
 
-* [New-UDButton](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDButton.txt)
+* [New-UDButton](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDButton.txt)
