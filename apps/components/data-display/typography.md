@@ -42,4 +42,4 @@ New-UDTypography -Text 'Secondar' -Sx @{
 
 ## API
 
-* [New-UDTypography](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDTypography.txt)
+* [New-UDTypography](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDTypography.txt)

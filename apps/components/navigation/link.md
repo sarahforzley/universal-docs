@@ -42,5 +42,5 @@ New-UDLink -Text 'Ironman Software' -OnClick {
 
 ## API
 
-* [New-UDLink](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDLink.txt)
+* [New-UDLink](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDLink.txt)
 

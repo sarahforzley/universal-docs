@@ -32,4 +32,4 @@ New-UDSkeleton -Animation wave
 
 ## API
 
-* [New-UDSkeleton](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDSkeleton.txt)
+* [New-UDSkeleton](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDSkeleton.txt)

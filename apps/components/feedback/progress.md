@@ -30,5 +30,5 @@ New-UDProgress -PercentComplete 75
 
 ## API
 
-* [New-UDProgress](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDProgress.txt)
+* [New-UDProgress](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDProgress.txt)
 

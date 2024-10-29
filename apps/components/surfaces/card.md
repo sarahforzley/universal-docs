@@ -57,9 +57,9 @@ New-UDCard -Header $Header -Media $Media -Body $Body -Footer $Footer -Expand $Ex
 
 ## API
 
-* [New-UDCard](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDCard.txt)
-* [New-UDCardBody](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDCardBody.txt)
-* [New-UDCardExpand](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDCardExpand.txt)
-* [New-UDCardFooter](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDCardFooter.txt)
-* [New-UDCardHeader](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDCardHeader.txt)
-* [New-UDCardMedia](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDCardMedia.txt)
+* [New-UDCard](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDCard.txt)
+* [New-UDCardBody](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDCardBody.txt)
+* [New-UDCardExpand](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDCardExpand.txt)
+* [New-UDCardFooter](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDCardFooter.txt)
+* [New-UDCardHeader](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDCardHeader.txt)
+* [New-UDCardMedia](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDCardMedia.txt)

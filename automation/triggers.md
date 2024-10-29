@@ -143,7 +143,7 @@ New-PSUTrigger -Condition {
 
 ## API
 
-* [New-PSUTrigger](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-PSUTrigger.txt)
-* [Remove-PSUTrigger](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Remove-PSUTrigger.txt)
-* [Set-PSUTrigger](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Set-PSUTrigger.txt)
-* [Get-PSUTrigger](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Get-PSUTrigger.txt)
+* [New-PSUTrigger](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-PSUTrigger.txt)
+* [Remove-PSUTrigger](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Remove-PSUTrigger.txt)
+* [Set-PSUTrigger](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Set-PSUTrigger.txt)
+* [Get-PSUTrigger](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Get-PSUTrigger.txt)

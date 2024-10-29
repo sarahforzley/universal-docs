@@ -34,4 +34,4 @@ New-UDAlert -Severity 'success' -Content { New-UDHtml 'This is an success alert 
 
 ## API
 
-[New-UDAlert](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDAlert.txt)
+[New-UDAlert](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDAlert.txt)

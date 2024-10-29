@@ -88,4 +88,4 @@ New-UDElement -Tag 'div' -Content {
 
 ## API&#x20;
 
-* [New-UDAppBar](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDAppBar.txt)
+* [New-UDAppBar](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDAppBar.txt)

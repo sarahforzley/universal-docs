@@ -40,4 +40,4 @@ New-UDImage -Url "https://ironmansoftware.com/img/ps-logo.png" -Attributes @{
 
 ## API
 
-* [New-UDImage](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDImage.txt)
+* [New-UDImage](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDImage.txt)

@@ -58,5 +58,5 @@ New-UDForm -Content {
 
 ## API&#x20;
 
-* [New-UDTransferList](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDTransferList.txt)
-* [New-UDTransferListItem](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDTransferListItem.txt)
+* [New-UDTransferList](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDTransferList.txt)
+* [New-UDTransferListItem](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDTransferListItem.txt)

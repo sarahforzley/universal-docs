@@ -212,9 +212,9 @@ Set-PSUSetting -JobRunId
 
 ## API
 
-* [Invoke-PSUScript](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Invoke-PSUScript.txt)
-* [Get-PSUJob](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Get-PSUJob.txt)
-* [Get-PSUJobFeedback](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Get-PSUJobFeedback.txt)
-* [Get-PSUJobOutput](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Get-PSUJobOutput.txt)
-* [Get-PSUJobPipelineOutput](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Get-PSUJobPipelineOutput.txt)
-* [Wait-PSUJob](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Wait-PSUJob.txt)
+* [Invoke-PSUScript](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Invoke-PSUScript.txt)
+* [Get-PSUJob](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Get-PSUJob.txt)
+* [Get-PSUJobFeedback](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Get-PSUJobFeedback.txt)
+* [Get-PSUJobOutput](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Get-PSUJobOutput.txt)
+* [Get-PSUJobPipelineOutput](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Get-PSUJobPipelineOutput.txt)
+* [Wait-PSUJob](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Wait-PSUJob.txt)

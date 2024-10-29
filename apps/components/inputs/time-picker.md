@@ -32,4 +32,4 @@ New-UDTimePicker -DisableAmPm
 
 ## API
 
-[New-UDTimePicker](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDTimePicker.txt)
+[New-UDTimePicker](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDTimePicker.txt)

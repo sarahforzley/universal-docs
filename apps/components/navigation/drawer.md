@@ -27,6 +27,6 @@ New-UDDrawer -Variant 'permanent' -Content {
 
 ## API&#x20;
 
-* [New-UDDrawer](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDDrawer.txt)
+* [New-UDDrawer](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDDrawer.txt)
 
 ###

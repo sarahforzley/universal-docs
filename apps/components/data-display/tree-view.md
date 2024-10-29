@@ -44,5 +44,5 @@ New-UDDashboard -Title 'File System' -Content {
 
 ## API
 
-* [New-UDTreeView](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDTreeView.txt)
-* [New-UDTreeNode](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDTreeNode.txt)
+* [New-UDTreeView](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDTreeView.txt)
+* [New-UDTreeNode](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDTreeNode.txt)

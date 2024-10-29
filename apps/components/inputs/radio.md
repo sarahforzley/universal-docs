@@ -78,6 +78,6 @@ New-UDRadioGroup -Label "Day" -Content {
 
 ## API
 
-* [New-UDRadio](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDRadio.txt)
-* [New-UDRadioGroup](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDRadioGroup.txt)
+* [New-UDRadio](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDRadio.txt)
+* [New-UDRadioGroup](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDRadioGroup.txt)
 

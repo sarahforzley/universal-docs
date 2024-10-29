@@ -72,4 +72,4 @@ New-UDAutocomplete -Options @(
 
 ## API
 
-* [New-UDAutocomplete](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDAutocomplete.txt)
+* [New-UDAutocomplete](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDAutocomplete.txt)

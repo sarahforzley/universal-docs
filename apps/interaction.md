@@ -18,7 +18,7 @@ New-UDButton -Text 'Clipboard' -OnClick {
 
 #### API
 
-* [Set-UDClipboard](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Set-UDClipboard.txt)
+* [Set-UDClipboard](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Set-UDClipboard.txt)
 
 ## Downloads
 
@@ -115,7 +115,7 @@ New-UDButton -Text 'Alert Me' -OnClick {
 
 #### **API**
 
-* [Invoke-UDJavaScript](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Invoke-UDJavaScript.txt)
+* [Invoke-UDJavaScript](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Invoke-UDJavaScript.txt)
 
 ## Toast
 
@@ -149,8 +149,8 @@ New-UDButton -Text 'Click' -OnClick {
 
 ### API
 
-* [Show-UDToast](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Show-UDToast.txt)
-* [Hide-UDToast](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Hide-UDToast.txt)
+* [Show-UDToast](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Show-UDToast.txt)
+* [Hide-UDToast](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Hide-UDToast.txt)
 
 ## Redirect
 
@@ -174,7 +174,7 @@ Invoke-UDRedirect '/publishedFolder/test.txt' -Native
 
 #### API
 
-* [Invoke-UDRedirect](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Invoke-UDRedirect.txt)
+* [Invoke-UDRedirect](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Invoke-UDRedirect.txt)
 
 ## Modal
 
@@ -348,9 +348,9 @@ switch ($opt) {
 
 ## API
 
-* [Get-UDElement](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Get-UDElement.txt)
-* [Set-UDElement](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Set-UDElement.txt)
-* [Clear-UDElement](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Clear-UDElement.txt)
-* [Remove-UDElement](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Remove-UDElement.txt)
-* [Sync-UDElement](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Sync-UDElement.txt)
-* [Select-UDElement](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/Select-UDElement.txt)
+* [Get-UDElement](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Get-UDElement.txt)
+* [Set-UDElement](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Set-UDElement.txt)
+* [Clear-UDElement](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Clear-UDElement.txt)
+* [Remove-UDElement](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Remove-UDElement.txt)
+* [Sync-UDElement](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Sync-UDElement.txt)
+* [Select-UDElement](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Select-UDElement.txt)

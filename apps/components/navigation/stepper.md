@@ -205,9 +205,9 @@ New-UDStepper -Steps {
 
 ## API
 
-* [New-UDStepper](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDStepper.txt)
-* [New-UDStep](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDStep.txt)
-* [New-UDValidationResult](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDValidationResult.txt)
+* [New-UDStepper](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDStepper.txt)
+* [New-UDStep](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDStep.txt)
+* [New-UDValidationResult](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDValidationResult.txt)
 
 
 

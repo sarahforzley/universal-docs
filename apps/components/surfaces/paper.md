@@ -40,4 +40,4 @@ New-UDPaper  -Content { } -Style @{
 
 ## API
 
-* [New-UDPaper](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDPaper.txt)
+* [New-UDPaper](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDPaper.txt)

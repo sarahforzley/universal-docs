@@ -24,5 +24,5 @@ New-UDExpansionPanelGroup -Children {
 
 ## API
 
-* [New-UDExpansionPanel](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDExpansionPanel.txt)
-* [New-UDExpansionPanelGroup](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDExpansionPanelGroup.txt)
+* [New-UDExpansionPanel](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDExpansionPanel.txt)
+* [New-UDExpansionPanelGroup](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDExpansionPanelGroup.txt)

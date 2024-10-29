@@ -93,9 +93,9 @@ Retrieve the value of the select from another component.
 
 ## API
 
-* [New-UDSelect](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDSelect.txt)
-* [New-UDSelectOption](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDSelectOption.txt)
-* [New-UDSelectGroup](https://github.com/ironmansoftware/universal-docs/blob/master/cmdlets/New-UDSelectGroup.txt)
+* [New-UDSelect](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDSelect.txt)
+* [New-UDSelectOption](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDSelectOption.txt)
+* [New-UDSelectGroup](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDSelectGroup.txt)
 
 ***
 
