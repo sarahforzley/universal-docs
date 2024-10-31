@@ -7,7 +7,7 @@ description: >-
 # Computers
 
 {% hint style="info" %}
-This feature requires a license. Each computer requires a license.&#x20;
+Each computer requires a license.&#x20;
 {% endhint %}
 
 PowerShell Universal can connect multiple instances of the application to the same SQL database and git repository. Configuration files will be synchronized across the nodes via the remote repository. Jobs, computer groups, identities and app tokens will all be stored within the database and are visible on any accessible nodes.&#x20;
@@ -47,3 +47,8 @@ New-PSUApp -Name 'Windows' -FilePath 'app.ps1' -BaseUrl '/app' -ComputerGroup Wi
 ## Maintenance Mode
 
 Computers can be set in maintenance mode. When a computer is in maintenance mode, it will not run scheduled jobs.&#x20;
+
+## Read-Only Mode
+
+When computers are in read-only mode, the admin console cannot make changes when accessing that node. Do not set all computers in your environment to read-only.
+
