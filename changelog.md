@@ -4,6 +4,51 @@ description: Changelog for PowerShell Universal.
 
 # Changelog
 
+## 5.0.14 - 10/31/2024
+
+#### Admin Console
+
+* Fixed an issue where a custom app bar logo would not display (#3945)
+* Fixed an issue pressing the tab key in the debug console (#3939)
+* Added support for deleting computer tags (#3961)
+* Fixed an issue starting an app that was in a start failed state (#3965)
+* Added Reload Configuration Files button to the Configuration Files page
+* Fixed an issue where nodes in git merge conflict status would not display state properly (#3971)
+* Added file editor to apps and modules pages
+* Fixed an issue with additional info buttons on home page in nested sites (#3979)
+* Fixed a display issue with endpoint methods (#3975)
+* Fixed an issue editing scripts and view jobs when using Windows Auth and PostgreSQL (#3952)
+* Added secret value form (#3954)
+* Fixed an issue where readonly endpoint wouldn't expose the test or log tabs (#3947)
+* Fixed an issue with job execution time when using PostgreSQL (#3915)
+* Added Auto Deploy option to app settings (#3992)
+
+#### Apps
+
+* Fixed an issue where a button group drop down item would not be shown when used within a modal (#3765)
+
+#### API
+
+* Fixed an issue with requests timing out too early (#3946)
+* Fixed an issue with an erroneous error message with integrated APIs (#3955)
+* Fixed an issue where endpoint docs wouldn't include base path (#3958)
+* Fixed an issue with endpoint logging (#3950)
+* Fixed an issue where remote server would not be indicated in event hub connections (#3980)
+* Added -Active, -Hub, -RemoteComputerName, -ServerComputerName to Get-PSUEventHubConnection (#3981)
+
+#### Platform
+
+* Fixed an issue with configuration files reloading unnecessarily during git operations (#3956)
+* Fixed an issue where a module PSM1 file could be locked when updating the content (#3948)
+
+#### Portal
+
+* Fixed an issue loading resources on the portal when using Windows Authentication (#3962)
+
+#### Cmdlets
+
+* Fixed an issue with Invoke-PSUEndpoint (#3969)
+
 ## 5.0.13 - 10/22/2024
 
 #### Admin Console
