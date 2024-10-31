@@ -16,21 +16,21 @@ This document will outline the steps necessary to configure EntraID OpenID Conne
 
 Within the Azure Portal, navigate to your Entra ID blade. Next, click the Enterprise Application node and then click New application.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Next, click Create your own application.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Select a name for your application and select Register an application to integrate with Microsoft Entra ID.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 In the Register an application page, define a redirect URI. This will be the URL of PowerShell Universal server that Entra ID will redirect the user to. This value is defined in the PowerShell Universal configuration file, `appsettings.json`.
 
 Now that the application has been created, from the Enterprise Applications page, click Single sign-on and then Go to application. This will bring you to the application registration page.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Certificates and secrets and define a new secret. This will be used with the PowerShell Universal configuration file.
 

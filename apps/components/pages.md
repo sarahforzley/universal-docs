@@ -8,17 +8,33 @@ An app can consist of one or more pages. A page can have a particular name and U
 
 ## Creating a new page
 
-Within the app editor, expand the Pages navigation menu and click New Page.
+Within the app editor, click the Create App Page button.
 
-<figure><img src="../../.gitbook/assets/image (364).png" alt=""><figcaption><p>New Page Button</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Create App Page Button</p></figcaption></figure>
 
-You can edit a page by clicking the link in the menu. The code editor will switch to the page's content.
+Once the page has been created, it will be listed in the pages tab.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (536).png" alt=""><figcaption><p>A page editor</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Pages Tab</p></figcaption></figure>
 
-To reference the page in your dashboard, use `Get-UDPage`.
+To update the content of a page, click the Edit Code button.
 
-<figure><img src="../../.gitbook/assets/image (193).png" alt=""><figcaption><p>Using a page in a dashboard</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Edit App Page</p></figcaption></figure>
+
+As an example, you could add a button to your page.&#x20;
+
+```powershell
+New-UDButton -Text 'What page is this?' -OnClick {
+    Show-UDToast $UDPage
+}
+```
+
+Once you have added the controls you would like to the page, you can add it to your app. To reference the page in your app, use `Get-UDPage`.
+
+```powershell
+New-UDApp -Pages @(
+    Get-UDPage -Name 'Users'
+)
+```
 
 ## Basic Page
 
@@ -35,7 +51,7 @@ New-UDApp -Title 'Pages' -Pages $Pages
 
 ## App with Multiple Pages
 
-Apps can have multiple pages and those pages can be defined by passing an array of UDPages to `New-UDApp`
+Apps can have multiple pages, and those pages can be defined by passing an array of UDPages to `New-UDApp`
 
 ```powershell
 $Pages = @()
@@ -223,7 +239,7 @@ New-UDApp -Title "Hello, World!" -Pages $Pages
 
 ### Role-Based Access
 
-You can use dynamic navigation to create a navigation menu that takes advantage of roles. Use `Protect-UDSection` to limit who has access to particular menu items. Ensure that you also include the same role on the page.&#x20;
+You can use dynamic navigation to create a navigation menu that takes advantage of roles. Use `Protect-UDSection` to limit who has access to particular menu items. Ensure that you also include the same role on the page.
 
 ```powershell
 $Navigation = {
@@ -388,4 +404,4 @@ New-UDPage -Name 'Static Page' -Content {
 
 ## API
 
-[New-UDPage](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDPage.txt)
+[New-UDPage](../../cmdlets/New-UDPage.txt)

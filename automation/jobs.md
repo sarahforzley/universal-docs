@@ -34,7 +34,7 @@ You can expand the tree view to see the objects and properties from the pipeline
 
 Any errors written to the error stream will be available on the Error tab within the job page.
 
-![Errors](<../.gitbook/assets/image (1) (1) (1) (1) (1).png>)
+![Errors](<../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png>)
 
 ## Status
 
@@ -212,9 +212,9 @@ Set-PSUSetting -JobRunId
 
 ## API
 
-* [Invoke-PSUScript](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Invoke-PSUScript.txt)
-* [Get-PSUJob](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Get-PSUJob.txt)
-* [Get-PSUJobFeedback](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Get-PSUJobFeedback.txt)
-* [Get-PSUJobOutput](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Get-PSUJobOutput.txt)
-* [Get-PSUJobPipelineOutput](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Get-PSUJobPipelineOutput.txt)
-* [Wait-PSUJob](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/Wait-PSUJob.txt)
+* [Invoke-PSUScript](../cmdlets/Invoke-PSUScript.txt)
+* [Get-PSUJob](../cmdlets/Get-PSUJob.txt)
+* [Get-PSUJobFeedback](../cmdlets/Get-PSUJobFeedback.txt)
+* [Get-PSUJobOutput](../cmdlets/Get-PSUJobOutput.txt)
+* [Get-PSUJobPipelineOutput](../cmdlets/Get-PSUJobPipelineOutput.txt)
+* [Wait-PSUJob](../cmdlets/Wait-PSUJob.txt)

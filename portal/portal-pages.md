@@ -18,7 +18,7 @@ You can create a portal page by navigating to Portal \ Pages in the Admin Consol
 
 Click the view button for the page in order to begin editing the content of the page. Once viewing the page, you can click Edit to enter edit mode.&#x20;
 
-<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Edit Page Button</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption><p>Edit Page Button</p></figcaption></figure>
 
 ### Adding Widgets
 

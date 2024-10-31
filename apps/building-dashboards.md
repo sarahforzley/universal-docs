@@ -81,7 +81,7 @@ $Pages += New-UDPage -Name 'Diagnostics' -Content {}
 New-UDApp -Pages $Pages -Title 'Dashboard'
 ```
 
-Learn more about [Pages here](building-dashboards.md#pages).
+Learn more about [Pages here](components/pages.md).
 
 ## Functions
 
@@ -89,7 +89,7 @@ Apps will automatically have access to any commands available within the PSModul
 
 Within the PowerShell Universal admin console, define functions in the Functions tab. Any functions defined with be written to a `PSM1` file in the same directory as the application code.&#x20;
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Function Tab</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>Function Tab</p></figcaption></figure>
 
 ## Built-in Variables
 
