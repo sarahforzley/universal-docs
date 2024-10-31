@@ -85,11 +85,11 @@ New-UDButtonGroup -Children {
 }
 ```
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Button Group</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (2).png" alt=""><figcaption><p>Button Group</p></figcaption></figure>
 
 ## Disable Button After Click
 
-This example uses `Set-UDElement` to disable the button after performing an action.&#x20;
+This example uses `Set-UDElement` to disable the button after performing an action.
 
 ```powershell
 New-UDButton -Id "btn1" -OnClick {
@@ -102,4 +102,4 @@ New-UDButton -Id "btn1" -OnClick {
 
 ## API
 
-* [New-UDButton](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDButton.txt)
+* [New-UDButton](../../../cmdlets/New-UDButton.txt)

@@ -20,7 +20,7 @@ Within the Azure Portal, navigate to your Entra ID blade. Next, click the Enterp
 
 Next, click Create your own application.
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Select a name for your application and select Register an application to integrate with Microsoft Entra ID.&#x20;
 

@@ -83,6 +83,14 @@ New-UDApp -Pages $Pages -Title 'Dashboard'
 
 Learn more about [Pages here](building-dashboards.md#pages).
 
+## Functions
+
+Apps will automatically have access to any commands available within the PSModulePath as well as modules you load directly into the app itself. That said, you can also define functions within the app itself. These functions will be included with a module that is stored alongside your app code. Any functions defined within this file will be automatically included with your app.&#x20;
+
+Within the PowerShell Universal admin console, define functions in the Functions tab. Any functions defined with be written to a `PSM1` file in the same directory as the application code.&#x20;
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Function Tab</p></figcaption></figure>
+
 ## Built-in Variables
 
 Built-in variables can be found on the [variables page](../platform/variables.md#dashboards).
