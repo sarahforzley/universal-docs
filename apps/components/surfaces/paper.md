@@ -18,6 +18,27 @@ New-UDPaper -Elevation 1 -Content {}
 New-UDPaper -Elevation 3 -Content {}
 ```
 
+## Paper Content Formatting&#x20;
+
+By default, the paper component uses the flex display type for content within the paper. This can cause issues with other types of content that may be stored within the paper. You can override the display type by using the `-Style` parameter.&#x20;
+
+```powershell
+$m=@'
+# Hello
+
+## world
+- a
+- b
+-c
+'@
+
+New-UDPaper -Elevation 7 -Children {
+   New-UDMarkdown -markdown $m
+} -Style @{
+   display = 'block'
+}
+```
+
 ## Square Paper
 
 By default, paper will have rounded edges. You can reduce the rounding by using a square paper.
@@ -40,4 +61,4 @@ New-UDPaper  -Content { } -Style @{
 
 ## API
 
-* [New-UDPaper](https://github.com/ironmansoftware/universal-docs/blob/v5/cmdlets/New-UDPaper.txt)
+* [New-UDPaper](../../../cmdlets/New-UDPaper.txt)
