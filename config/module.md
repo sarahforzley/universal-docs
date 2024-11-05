@@ -44,10 +44,22 @@ The API developer can work around this by providing an App Token that does have 
 
 You can change the authorization model to allow any calls from within PowerShell Universal to function without an app token. While this may be considered less secure by some, it depends on your organization's use of the platform. This value can be set in `appsettings.json` or within the `API__SecurityModel` environment variable.
 
+Permissive mode still uses the external PowerShell Universal APIs and communicates the user context, if available, when calling the PowerShell Universal APIs.&#x20;
+
 ```json
 {
     "Api": {
        "SecurityModel": "Permissive"
+    }
+}
+```
+
+You can also use the `Integrated` Security Model to completely avoid the need to configure app tokens, URLs or certificates. The Integrated Security Model does not communicate the user context, even when the user is authenticated.&#x20;
+
+```json
+{
+    "Api": {
+       "SecurityModel": "Integrated"
     }
 }
 ```
@@ -63,6 +75,14 @@ In some environments, it may be required to allow PowerShell Universal to trust 
     }
 }
 ```
+
+### Integrated Mode
+
+Integrated mode uses the internal PowerShell Universal backchannel connection to communicate with the services via the Universal module. When using Integrated mode, call context is not provided to the services. This means that no authorization or authentication is performed. Integrated mode is useful in environments that do not require any security for internal API calls. It also bypasses the need to configure certificates or API URLs.&#x20;
+
+You can invoke cmdlets using integrated mode by using the `-Integrated` switch parameter. The server Security Model setting must be either `Permissive` or `Integrated` to use the `-Integrated` parameter.&#x20;
+
+The server Security Model can also be set to `Integrated`. This forces all cmdlet calls to use the integrated mode and no longer requires the use of the `-Integrated` parameter.&#x20;
 
 ### Schedules
 
@@ -111,3 +131,7 @@ If HTTPS is used, the certificate must be trusted by the system. If the certific
 When using HTTP or Windows Authentication, HTTP/2 is not supported and gRPC cannot run natively because trailing headers are not supported. To accommodate this, the Universal module will use a technology call gRPC-Web to translate gRPC calls to HTTP and JSON in order call HTTP REST methods rather than the standard gRPC methods. &#x20;
 
 This configuration is slightly slower but shouldn't be noticeable in most environments.&#x20;
+
+### Integrated Mode
+
+Integrated mode does not use the external API and communicates across the gRPC backchannel of PowerShell Universal. There is no need to configure API URLs, certificates or credentials.&#x20;
