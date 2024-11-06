@@ -79,7 +79,7 @@ description: Changelog for PowerShell Universal.
 
 #### Security
 
-* [Critical security fix for admin console (CVE TBD)](https://docs.powershelluniversal.com/changelogs/cves#cve-tbd-10-17-2024-privilege-escalation-and-information-disclosure)
+* [Critical security fix for admin console ](https://docs.powershelluniversal.com/changelogs/cves#cve-tbd-10-17-2024-privilege-escalation-and-information-disclosure)(CVE-2024-50616)
 
 #### Admin Console
 

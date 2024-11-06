@@ -6,7 +6,7 @@ description: CVEs for PowerShell Universal.
 
 Please report vulnerabilities to Ironman Software. To learn about our vulnerability response policy, [click here](https://ironmansoftware.com/vulnerability-response-policy/).&#x20;
 
-## CVE TBD - 10/17/2024 - Privilege escalation and information disclosure&#x20;
+## CVE-2024-50616 - 10/17/2024 - Privilege escalation and information disclosure&#x20;
 
 ### Description&#x20;
 
