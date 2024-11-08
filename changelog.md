@@ -4,6 +4,46 @@ description: Changelog for PowerShell Universal.
 
 # Changelog
 
+## 5.0.15 - 11/5/2024
+
+#### Admin Console
+
+* Fixed an issue with tagged variables (#4002)
+* Added Telemetry option to General Settings
+* Added Report Bug button to error alert
+* Added tooltip help to maintenance mode and readonly mode for computers (#3996)
+* Added Help menu
+* Documentation links now open in a new tab
+* Fixed an issue with job execution time (#4016)
+* Reduced Blazor log level
+* Fixed an issue when jobs had multiple requests for feedback
+
+#### APIs
+
+* Fixed an issue where event hub agent would not log Write-\* calls (#3983)
+* Added -RemoteDomainName and -RemoteUserName to Get-PSUEventHubConnection (#4009)
+* Fixed an issue where event hubs would only run one command at a time (#3988)
+
+#### Apps
+
+* Fixed an issue with button colors (#3974)
+* Fixed an issue where apps would auto-deploy when secrets were changed (#4022)
+
+#### Automation
+
+* Fixed an issue grooming jobs (#3929)
+
+#### Cmdlets
+
+* Added -Integrated mode for cmdlets
+* Added -Silent to Invoke-PSUScript and Wait-PSUJob
+* Fixed an issue with switch parameters and Invoke-PSUScript (#4011)
+
+#### Platform
+
+* Fixed an issue where the service could crash when losing database connection (#4012)
+* Fixed an issue where secrets could be deleted in multi-node environments during git sync (#3959)
+
 ## 5.0.14 - 10/31/2024
 
 #### Admin Console
