@@ -8,7 +8,7 @@ description: This page provides installation and configuration information for D
 
 ### Confirming Docker is installed correctly
 
-> _**NOTE:**_ Note: Apple M1 devices: At the time of writing there are some issues on Apple M1 devices and, some ARM64/ARMv8 devices. Please review [this forum thread](https://forums.ironmansoftware.com/t/docker-image-not-working/8781/15) before proceeding.
+> __**NOTE:**__ Apple M1 devices: At the time of writing there are some issues on Apple M1 devices and, some ARM64/ARMv8 devices. Please review [this forum thread](https://forums.ironmansoftware.com/t/docker-image-not-working/8781/15) before proceeding.
 
 #### Docker
 
@@ -122,11 +122,11 @@ For more examples and ideas, visit:
 
 ### Using the pre-built Container
 
-In order to run PowerShell Universal, you can use the provided container image. The docker image is available on [Docker Hub](https://hub.docker.com/r/ironmansoftware/universal).
+In order to run PowerShell Universal, use the provided container image. The docker image is available on [Docker Hub](https://hub.docker.com/r/ironmansoftware/universal).
 
 The prebuilt version supports both free & paid features of PowerShell Universal.
 
-You can start the container by pulling the image and then running a container with the default port bound.
+Start the container by pulling the image and then running a container with the default port bound.
 
 #### Running a basic image
 
@@ -137,7 +137,7 @@ docker run --name 'PSU' -it -p 5000:5000 ironmansoftware/universal
 
 #### Present an image to a different port
 
-If port 5000 is unavailable on your host, this can be switched to another port.
+If port 5000 is unavailable on your host, switch to another port.
 
 e.g. Present on port 80
 
@@ -148,11 +148,11 @@ docker run --name 'PSU' -it -p 80:5000 ironmansoftware/universal
 
 #### Mount a volume
 
-The `docker run` command will allow you to mount a volume for persistent storage. This needs to be mounted to the /root folder.
+The `docker run` command allows you to mount a volume for persistent storage. Mount the volume to the /root folder.
 
 **Mount a volume on container in Windows**
 
-The following command mounts the folder `C:\docker\volumes\PSU` to `/root` on your container
+The following command mounts the folder `C:\docker\volumes\PSU` to `/root` on your container:
 
 ```
 docker pull ironmansoftware/universal
@@ -161,7 +161,7 @@ docker run --name 'PSU' -it -p 5000:5000 -v C:\docker\volumes\PSU:/root ironmans
 
 **Mount a volume on Container on Mac and Linux**
 
-The following command mounts the folder `/docker/volumes/PSU` to `/root` on your container
+The following command mounts the folder `/docker/volumes/PSU` to `/root` on your container:
 
 ```
 docker pull ironmansoftware/universal
@@ -170,7 +170,7 @@ docker run --name 'PSU' -it -p 5000:5000 -v /docker/volumes/PSU:/root ironmansof
 
 #### Stopping a Container
 
-The following command removes a stopped container named `PSU`
+The following command removes a stopped container named `PSU`:
 
 ```
 docker stop PSU
@@ -178,13 +178,13 @@ docker stop PSU
 
 #### Removing a Container
 
-The following command stops a container named `PSU`
+The following command stops a container named `PSU`:
 
 ```
 docker rm PSU
 ```
 
-The `--force` flag can be used to remove a running container
+The `--force` flag can remove a running container:
 
 ```
 docker rm --force PSU
@@ -194,11 +194,11 @@ docker rm --force PSU
 
 Docker Compose allows you to use a yaml text file to standardize your build and script the deployment (or build) or multiple containers.
 
-The default name for any compose file is `docker-compose.yml` it is recommended you use this as your compose filename.
+The default name for any compose file is `docker-compose.yml`. It is recommended you use this as your compose filename.
 
 #### Creating a Compose Script for Windows
 
-The following compose file will run a Powershell Universal container in Windows
+The following compose file runs a Powershell Universal container in Windows:
 
 ```yml
 version: "5.0"
@@ -217,7 +217,7 @@ services:
 
 #### Creating a Compose Script for Mac / Linux
 
-The following compose file will run a Powershell Universal container on Mac's and Linux
+The following compose file runs a Powershell Universal container on Mac and Linux:
 
 ```yml
 version: "5.0"
@@ -236,9 +236,9 @@ services:
 
 #### Starting Containers using Compose Scripts
 
-Using a Terminal shell, or PowerShell for Windows. cd to the directory with your `docker-compose.yml` script.
+Using a Terminal shell or PowerShell for Windows. cd to the directory with your `docker-compose.yml` script.
 
-Run the following command
+Run the following command:
 
 ```
 docker compose up -d
@@ -306,13 +306,11 @@ services:
 
 ### Building a Custom Container
 
-In some cases, you may wish to build more features, modify, or hardcode Environment Variables into your container.
-
-For that, you will need to Create a `Dockerfile`
+If you wish to build more features, modify, or hardcode Environment Variables into your container, then create a `Dockerfile`
 
 > _**NOTE:**_ Dockerfiles' are case-sensitive and must start with a capital 'D'.
 
-To create a Docker image that can persist the Universal data, you can create a dockerfile like the one below.
+To create a Docker image that can persist the Universal data, create a dockerfile like the one below.
 
 This Dockerfile exposes port 5000, creates a /data volume, sets configuration environment variables to store the Universal repository and database in the volume and then sets the Universal.Server as the entry point to the container.
 
@@ -333,7 +331,7 @@ ENTRYPOINT ["./Universal/Universal.Server"]
 
 #### Building a container
 
-From the path your Dockerfile is hosted in run the following command:
+From the path that hosts your Dockerfile, run the following command:
 
 ```
 docker build . --tag=universal-persistent
@@ -354,13 +352,13 @@ ENV Logging__Path C:/data/logs/log.txt
 ENTRYPOINT ["C:/ProgramData/Universal/Universal.Server.exe"]
 ```
 
-You can run a build with the build command.
+Run a build with the build command:
 
 ```
 docker build . --tag=universal-persistent
 ```
 
-You can start the docker container with the run command and make sure to specify the volume to mount.
+Start the docker container with the run command and make sure to specify the volume to mount:
 
 ```
 docker run -it --name powershelluniversal --mount source=psudata,target=/home/data --rm -d  -p 5000:5000/tcp universal-persistent:latest
@@ -368,7 +366,7 @@ docker run -it --name powershelluniversal --mount source=psudata,target=/home/da
 
 #### SQL
 
-To use SQL persistence, you can define the plugin and connection string as follows.
+To use SQL persistence, define the plugin and connection string as follows:
 
 ```
 ENV Data__ConnectionString=Data Source=ServerName; Initial Catalog=DatabaseName; Integrated Security=SSPI;
@@ -377,7 +375,7 @@ ENV Plugins:0=SQL
 
 ### Time Zones
 
-To properly support time zones on Linux when scheduling jobs, you will need to include the `tzdata` package in your dockerfile along with an environment variable that specifies the server time zone.
+To properly support time zones on Linux when scheduling jobs, include the `tzdata` package in your dockerfile along with an environment variable that specifies the server time zone.
 
 ```
 ENV TZ Europe/Amsterdam
@@ -386,7 +384,7 @@ RUN apt-get install -y tzdata
 
 ## Tags
 
-We publish the following tags to Docker Hub.
+We publish the following tags to Docker Hub:
 
 * latest - Current version using Ubuntu LTS
 * 4.x-preview-modules - Nightly build of version 4 using Ubuntu LTS and select AZ modules
@@ -398,7 +396,7 @@ We publish the following tags to Docker Hub.
 
 ### Included Modules
 
-The module container images include the following modules.
+The module container images include the following modules:
 
 * Az.Accounts
 * Az.Compute
@@ -408,7 +406,7 @@ The module container images include the following modules.
 
 ## Summary
 
-This has been a very basic "How to Get Started" which will enable you to get started running or building PSU Containers. All sources for commands have been linked in the references section below.
+This basic "How to Get Started" enables you to start running or building PSU Containers. This references section links all sources for commands:
 
 ## References
 
