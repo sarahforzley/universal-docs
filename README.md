@@ -31,7 +31,7 @@ Execute, schedule, secure and audit scripts in an easy-to-use, web-interface.
 
 * [Scheduling](https://docs.powershelluniversal.com/automation/schedules)
 * [Run As Support](https://docs.powershelluniversal.com/automation/scripts#running-a-script-as-another-user)
-* Multiple[ Environments](https://docs.powershelluniversal.com/config/environments)
+* [Multiple Environments](https://docs.powershelluniversal.com/config/environments)
 * [Automatic Form Generation](https://docs.powershelluniversal.com/automation/scripts#running-a-script-with-parameters)
 * [Feedback Integration](https://docs.powershelluniversal.com/automation/jobs#feedback)
 * [Pipeline Output](https://docs.powershelluniversal.com/automation/jobs#view-job-pipeline-output)
