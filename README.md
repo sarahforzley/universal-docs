@@ -64,7 +64,8 @@ PowerShell Universal is cross-platform and can be hosted on-premises, in the clo
 
 * [Windows, Linux and Mac](https://docs.powershelluniversal.com/get-started)
 * [Docker Containers](https://docs.powershelluniversal.com/getting-started/docker)
-* [Azure](https://docs.powershelluniversal.com/config/hosting/azure)[ and IIS](https://docs.powershelluniversal.com/config/hosting/hosting-iis)
+* [Azure](https://docs.powershelluniversal.com/config/hosting/azure)
+* [IIS](https://docs.powershelluniversal.com/config/hosting/hosting-iis)
 * [Windows Service](https://docs.powershelluniversal.com/getting-started#msi-install-windows)
 * [HTTPS](https://docs.powershelluniversal.com/config/hosting#configuring-https)
 
