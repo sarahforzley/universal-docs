@@ -6,11 +6,11 @@ description: Get started with PowerShell Universal
 
 ## Install PowerShell Universal
 
-You'll need to install the PowerShell Universal server. [There are a lot of ways to do so](getting-started/) but you can use the command line below to get started quickly.
+You'll need to install the PowerShell Universal server. [There are a lot of ways to do so,](getting-started/) but you can use the command line below to get started quickly:
 
 {% tabs %}
 {% tab title="Windows" %}
-You can install PowerShell Universal as a service. Ensure that PowerShell is running as administrator or the service won't install correctly.
+You can install PowerShell Universal as a service. Ensure that PowerShell is running as administrator, or the service won't install correctly.
 
 ```powershell
 Install-Module Universal
@@ -19,7 +19,7 @@ Install-PSUServer
 {% endtab %}
 
 {% tab title="Linux" %}
-You can install PowerShell Universal using the following shell script.
+You can install PowerShell Universal using the following shell script:
 
 ```
 Install-Module Universal
@@ -28,7 +28,7 @@ Install-PSUServer
 {% endtab %}
 
 {% tab title="Mac OS X" %}
-You can install PowerShell Universal using the Universal PowerShell module.
+You can install PowerShell Universal using the Universal PowerShell module:
 
 ```
 Install-Module Universal
@@ -50,25 +50,19 @@ chmod +x ./PSU/Universal.Server
 
 ## Open PowerShell Universal
 
-By default, PowerShell Universal is running on port 5000 of localhost. The first time you start the server, you will be prompted to set the local administrator user name and password. Next, login to the Admin Console.&#x20;
-
-![](<.gitbook/assets/image (426).png>)
+By default, PowerShell Universal runs on port 5000 of localhost. The first time you start the server, you will be prompted to set the local administrator user name and password. Next, log in to the Admin Console.&#x20;
 
 ## Create an API
 
 APIs allow you to call PowerShell scripts over HTTP. To create an API, click API \ Endpoints and click Create New Endpoint. Specify a URL.
 
-![](<.gitbook/assets/image (259).png>)
-
-Next, click details on the API that was created an enter the following command into the editor.
+Next, click details on your new API and enter the following command into the editor:
 
 ```
 Get-ComputerInfo
 ```
 
 Save the script and then click the Execute button to test it out.
-
-![](<.gitbook/assets/image (448).png>)
 
 You can also execute the API via `Invoke-RestMethod`.
 
@@ -89,9 +83,7 @@ WindowsRegisteredOrganization                           :
 
 To create a script, click Automation \ Scripts and then click Create New Script.
 
-![](<.gitbook/assets/image (559).png>)
-
-Enter the following script into the editor and save.
+Enter the following script into the editor and save:
 
 ```powershell
 Read-Host "What should I say?"
@@ -105,15 +97,11 @@ Get-Service
 
 Once the script is saved, click Run.
 
-![](.gitbook/assets/runjob.gif)
-
 ## Create an App
 
 To create a new PowerShell-based user interface (app), you can click User Interfaces \ Apps and then Create New App.
 
-![](<.gitbook/assets/image (248).png>)
-
-After clicking Ok, click the Details button to edit the PowerShell script. Add the following script to the editor.
+After clicking Ok, click the Details button to edit the PowerShell script. Add the following script to the editor:
 
 ```powershell
 New-UDApp -Title "Hello, World!" -Content {
@@ -125,9 +113,7 @@ New-UDApp -Title "Hello, World!" -Content {
 
 Save the app, click the Restart button and then click the View button. Click the Click Me button.
 
-![](<.gitbook/assets/image (483).png>)
-
-Learn more about the various features of PowerShell Universal
+Learn more about the various features of PowerShell Universal:
 
 * [APIs](api/about.md)
 * [Automation](automation/about.md)
