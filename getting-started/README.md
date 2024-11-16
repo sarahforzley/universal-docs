@@ -6,15 +6,15 @@ description: Installation instructions for PowerShell Universal.
 
 ## MSI Install (Windows)
 
-The MSI install will create a PowerShell Universal service. By default, PowerShell Universal will be listening on port 5000. You will be able to navigate to `http://localhost:5000`
+The MSI install creates a PowerShell Universal service. By default, PowerShell Universal listens on port 5000. You can navigate to `http://localhost:5000`
 
 MSI downloads are available on our [download page](https://ironmansoftware.com/downloads).
 
-System installs will run as a Windows service. User installs will run when the user logins into the machine and runs in the user's context.
+System installs run as a Windows service. User installs run when the user logs in to the machine. The user install runs in the user's context.
 
 ### MSI Parameters
 
-The following table contains the parameters you can specify if running `msiexec` against our MSI install for automation purposes.
+The following table contains the parameters you can specify if running `msiexec` against our MSI install for automation purposes:
 
 | Parameter              | Description                                                                                                                  | Default Value                                             |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
@@ -33,7 +33,7 @@ The following table contains the parameters you can specify if running `msiexec`
 
 ### Example
 
-Below is an example of how to run `msiexec.exe` to install PowerShell Universal and provide parameters to the installer.
+The example below shows how to run `msiexec.exe` to install PowerShell Universal and provide parameters to the installer:
 
 {% code overflow="wrap" %}
 ```powershell
@@ -57,7 +57,7 @@ Start-Process .\Universal\Universal.Server.exe
 
 ### Linux
 
-You can use the following command line on Linux to install and start PowerShell Universal.
+You can use the following command line on Linux to install and start PowerShell Universal:
 
 ```
  wget https://imsreleases.blob.core.windows.net/universal/production/4.2.7/Universal.linux-x64.4.2.7.zip
@@ -69,7 +69,7 @@ You can use the following command line on Linux to install and start PowerShell 
 
 ## Linux Service
 
-You can use `systemd` to start PowerShell Universal as a service. The below script is an example of downloading a version of PowerShell Universal and installing it as a service.&#x20;
+You can use `systemd` to start PowerShell Universal as a service. The below script is an example of downloading a version of PowerShell Universal and installing it as a service:&#x20;
 
 ```bash
 # ----
@@ -163,15 +163,15 @@ To install the Universal server, you can use `Install-PSUServer`.
 Install-PSUServer -LatestVersion
 ```
 
-If you run this command on Windows, a Windows service will be created and started on your machine. If you run this command on Linux, a systemd service will be created and started. If you run this command on Mac OS, the PowerShell Universal server will be downloaded and extracted.
+Running this command on Windows creates and starts a Windows service on your machine. Running this command on Linux creates and starts a systemd service on your machine. Running this command on Mac OS downloads and extracts the PowerShell Universal server.
 
 ## Chocolatey Package (Windows)
 
 {% hint style="warning" %}
-Chocolatey packages for PowerShell Universal are usually available within a week of release but will not be available the day of a release.
+Chocolatey packages for PowerShell Universal are usually available within a week of release but are not available the day of a release.
 {% endhint %}
 
-You can install PowerShell Universal using the [Chocolatey package](https://chocolatey.org/packages/powershelluniversal). The package runs the MSI install. It will install Universal as a service and open a web browser after the install.
+You can install PowerShell Universal using the [Chocolatey package](https://chocolatey.org/packages/powershelluniversal). The package runs the MSI install. It installs Universal as a service and opens a web browser after the install.
 
 You can login with the "admin" user and any password.
 
@@ -189,13 +189,11 @@ Please visit the [IIS hosting documentation](../config/hosting/hosting-iis.md) f
 
 ## Antivirus Configuration
 
-PowerShell Universal takes full advantage of PowerShell and the PowerShell SDK. It includes PowerShell scripts directly in the product. You will want to consider configuring antivirus to allow for execution of PowerShell scripts in PowerShell Universal.
+PowerShell Universal takes full advantage of PowerShell and the PowerShell SDK. It includes PowerShell scripts directly in the product. Consider configuring antivirus to allow execution of PowerShell scripts in PowerShell Universal.
 
 ### Directories
 
-The following directories will contain scripts and executable files that may need to be excluded from antivirus checks.
-
-The following are examples from a standard Windows system. Changing paths within appsettings.json or within the installer will require changing which directories are execluded.
+The following directories contain examples from a standard Windows system of scripts and executable files that you may need to exclude from antivirus checks. Changing paths within appsettings.json or within the installer requires changing which directories are excluded.
 
 | Path                              | Description                                                                                                  |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------ |
@@ -205,7 +203,7 @@ The following are examples from a standard Windows system. Changing paths within
 
 ### Executables
 
-It may be necessary to exclude certain executables that will run PowerShell scripts. The below is a list of executables that will run PowerShell from PowerShell Universal.
+It may be necessary to exclude certain executables that run PowerShell scripts. The below is a list of executables that run PowerShell from PowerShell Universal.
 
 | Name                 | Description                                            |
 | -------------------- | ------------------------------------------------------ |
@@ -220,16 +218,16 @@ It may be necessary to exclude certain executables that will run PowerShell scri
 
 ## Agent
 
-The PowerShell Universal Agent is used for executing Event Hub actions. Depending on your environment, you will install it in different ways.&#x20;
+The PowerShell Universal Agent executes Event Hub actions. Install it depending on your environment:&#x20;
 
 ### Windows (MSI)
 
-The PowerShell Universal Agent MSI is available on our download page. After installing the MSI, you will have a PowerShell Universal Agent service running on your machine. You will need to [configure it](../api/event-hubs.md) to connect to PowerShell Universal.&#x20;
+The PowerShell Universal Agent MSI is on our download page. After installing the MSI, a PowerShell Universal Agent service runs on your machine. [Configure it](../api/event-hubs.md) to connect to PowerShell Universal.&#x20;
 
 ### ZIP
 
-There are ZIP files for each platform we support on our downloads page. Each ZIP will contain a `PowerShellUniversal.Agent.exe` or `PowerShellUniversal.Agent` file that can be used to start an agent. You will need to run the process as a service for it to start whenever the machine is rebooted.&#x20;
+ZIP files for each platform we support are on our downloads page. Each ZIP contains a `PowerShellUniversal.Agent.exe` or `PowerShellUniversal.Agent` file that can start an agent. Run the process as a service for it to start whenever the machine reboots.&#x20;
 
 ## Next Steps
 
-At this point, Universal is up and running. You can navigate to the admin console by visiting `http://localhost:5000` by default. Login with the default admin name and password or create a default admin account.&#x20;
+At this point, Universal is up and running. Visit `http://localhost:5000` or your default port to navigate to the admin console. Log in with the default admin name and password or create a default admin account.&#x20;
