@@ -7,11 +7,11 @@ SYNOPSIS
     
     
 SYNTAX
-    Invoke-PSUScript [-Id] <Int64> [-AppToken <String>] [-ComputerName <String>] [-Credential <Variable>] [-Environment <String>] [-Integrated] [-Notes <String>] [-UseDefaultCredentials] [-Wait] [-WaitForDebugger] [-Queue <String>] [-Parameters <Hashtable>] [-WaitTimeout <Int32>] [<CommonParameters>]
+    Invoke-PSUScript [-Id] <Int64> [-AppToken <String>] [-ComputerName <String>] [-Credential <Variable>] [-Environment <String>] [-Integrated] [-Notes <String>] [-UseDefaultCredentials] [-Wait] [-WaitForDebugger] [-Queue <String>] [-Parameters <Hashtable>] [-WaitTimeout <Int32>] [-Silent] [-Tags <Tag[]>] [-TrustCertificate] [<CommonParameters>]
     
-    Invoke-PSUScript [-Name] <String> [-AppToken <String>] [-ComputerName <String>] [-Credential <Variable>] [-Environment <String>] [-Integrated] [-Notes <String>] [-UseDefaultCredentials] [-Wait] [-WaitForDebugger] [-Queue <String>] [-Parameters <Hashtable>] [-WaitTimeout <Int32>] [<CommonParameters>]
+    Invoke-PSUScript [-Name] <String> [-AppToken <String>] [-ComputerName <String>] [-Credential <Variable>] [-Environment <String>] [-Integrated] [-Notes <String>] [-UseDefaultCredentials] [-Wait] [-WaitForDebugger] [-Queue <String>] [-Parameters <Hashtable>] [-WaitTimeout <Int32>] [-Silent] [-Tags <Tag[]>] [-TrustCertificate] [<CommonParameters>]
     
-    Invoke-PSUScript [-Script] <Script> [-AppToken <String>] [-ComputerName <String>] [-Credential <Variable>] [-Environment <String>] [-Integrated] [-Notes <String>] [-UseDefaultCredentials] [-Wait] [-WaitForDebugger] [-Queue <String>] [-Parameters <Hashtable>] [-WaitTimeout <Int32>] [<CommonParameters>]
+    Invoke-PSUScript [-Script] <Script> [-AppToken <String>] [-ComputerName <String>] [-Credential <Variable>] [-Environment <String>] [-Integrated] [-Notes <String>] [-UseDefaultCredentials] [-Wait] [-WaitForDebugger] [-Queue <String>] [-Parameters <Hashtable>] [-WaitTimeout <Int32>] [-Silent] [-Tags <Tag[]>] [-TrustCertificate] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -151,6 +151,33 @@ PARAMETERS
         Required?                    false
         Position?                    named
         Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -Silent [<SwitchParameter>]
+        Prevents interaction with the current PowerShell host. Will not write to streams or invoke Read-Host.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -Tags <Tag[]>
+        Tags to apply to the job.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
         Accept pipeline input?       False
         Accept wildcard characters?  false
         

@@ -2,309 +2,287 @@
 NAME
     Set-PSUBranding
     
+SYNOPSIS
+    Sets branding for PowerShell Universal.
+    
+    
 SYNTAX
-    Set-PSUBranding [-LoginPageImage <string>] [-AppBarLogo <string>] [-AdminConsoleTitle <string>] [-LoginPageTitle <string>] [-LoginPageText <string>] [-LoginPageDescription <string>] [-PrimaryColor <string>] [-SecondaryColor <string>] [-PrimaryFontColor <string>] [-SecondaryFontColor <string>] [-HeaderFontColor <string>] [-HeaderColor <string>] [-Copyright <string>] [-LoginPageLinks <LoginPageLink[]>] [-CssStylesheet <string[]>] [-CssStylesheetIntegrity <string[]>] [-PageNotFoundDescription <string>] [-NotAuthorizedDescription <string>] [-AppNotRunningDescription <string>] [-PageNotFoundTitle <string>] [-NotAuthorizedTitle <string>] [-LoggedOut <string>] [-LoggedOutDescription <string>] [-Favicon <string>] [-ComputerName <string>] [-AppToken <string>] [-Credential <pscredential>] [-UseDefaultCredentials] [-Integrated] [-TrustCertificate] [<CommonParameters>]
+    Set-PSUBranding [-AdminConsoleTitle <String>] [-AppBarLogo <String>] [-AppNotRunningDescription <String>] [-AppToken <String>] [-ComputerName <String>] [-Copyright <String>] [-Credential <PSCredential>] [-CssStylesheet <String[]>] [-CssStylesheetIntegrity <String[]>] [-Favicon <String>] [-HeaderColor <String>] [-HeaderFontColor <String>] [-Integrated] [-LoggedOut <String>] [-LoggedOutDescription <String>] [-LoginPageDescription <String>] [-LoginPageImage <String>] [-LoginPageLinks <LoginPageLink[]>] [-LoginPageText <String>] [-LoginPageTitle <String>] [-NotAuthorizedDescription <String>] [-NotAuthorizedTitle <String>] [-PageNotFoundDescription <String>] [-PageNotFoundTitle <String>] [-PrimaryColor <String>] [-PrimaryFontColor <String>] [-SecondaryColor <String>] [-SecondaryFontColor <String>] [-TrustCertificate] [-UseDefaultCredentials] [<CommonParameters>]
     
     
+DESCRIPTION
+    {{ Fill in the Description }}
+    
+
 PARAMETERS
-    -AdminConsoleTitle <string>
+    -AdminConsoleTitle <String>
+        {{ Fill AdminConsoleTitle Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -AppBarLogo <string>
+    -AppBarLogo <String>
+        {{ Fill AppBarLogo Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -AppNotRunningDescription <string>
+    -AppNotRunningDescription <String>
+        {{ Fill AppNotRunningDescription Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -AppToken <string>
+    -AppToken <String>
+        {{ Fill AppToken Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -ComputerName <string>
+    -ComputerName <String>
+        {{ Fill ComputerName Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      Uri
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -Copyright <string>
+    -Copyright <String>
+        {{ Fill Copyright Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -Credential <pscredential>
+    -Credential <PSCredential>
+        Credentials to login to the PowerShell Universal Management API.
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -CssStylesheet <string[]>
+    -CssStylesheet <String[]>
+        {{ Fill CssStylesheet Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -CssStylesheetIntegrity <string[]>
+    -CssStylesheetIntegrity <String[]>
+        {{ Fill CssStylesheetIntegrity Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -Favicon <string>
+    -Favicon <String>
+        {{ Fill Favicon Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -HeaderColor <string>
+    -HeaderColor <String>
+        {{ Fill HeaderColor Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -HeaderFontColor <string>
+    -HeaderFontColor <String>
+        {{ Fill HeaderFontColor Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -Integrated
+    -Integrated [<SwitchParameter>]
+        {{ Fill Integrated Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -LoggedOut <string>
+    -LoggedOut <String>
+        {{ Fill LoggedOut Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -LoggedOutDescription <string>
+    -LoggedOutDescription <String>
+        {{ Fill LoggedOutDescription Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -LoginPageDescription <string>
+    -LoginPageDescription <String>
+        {{ Fill LoginPageDescription Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -LoginPageImage <string>
+    -LoginPageImage <String>
+        {{ Fill LoginPageImage Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      Image
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
     -LoginPageLinks <LoginPageLink[]>
+        {{ Fill LoginPageLinks Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -LoginPageText <string>
+    -LoginPageText <String>
+        {{ Fill LoginPageText Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -LoginPageTitle <string>
+    -LoginPageTitle <String>
+        {{ Fill LoginPageTitle Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      Title
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -NotAuthorizedDescription <string>
+    -NotAuthorizedDescription <String>
+        {{ Fill NotAuthorizedDescription Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -NotAuthorizedTitle <string>
+    -NotAuthorizedTitle <String>
+        {{ Fill NotAuthorizedTitle Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -PageNotFoundDescription <string>
+    -PageNotFoundDescription <String>
+        {{ Fill PageNotFoundDescription Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -PageNotFoundTitle <string>
+    -PageNotFoundTitle <String>
+        {{ Fill PageNotFoundTitle Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -PrimaryColor <string>
+    -PrimaryColor <String>
+        {{ Fill PrimaryColor Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -PrimaryFontColor <string>
+    -PrimaryFontColor <String>
+        {{ Fill PrimaryFontColor Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -SecondaryColor <string>
+    -SecondaryColor <String>
+        {{ Fill SecondaryColor Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -SecondaryFontColor <string>
+    -SecondaryFontColor <String>
+        {{ Fill SecondaryFontColor Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -TrustCertificate
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -UseDefaultCredentials
+    -UseDefaultCredentials [<SwitchParameter>]
+        {{ Fill UseDefaultCredentials Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
     <CommonParameters>
@@ -313,19 +291,27 @@ PARAMETERS
         OutBuffer, PipelineVariable, and OutVariable. For more information, see
         about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
     
-    
 INPUTS
     None
+        
     
     
 OUTPUTS
     System.Object
+        
     
-ALIASES
-    New-PSUBranding
     
-
-REMARKS
-    None
+NOTES
+    
+    
+        
+    
+    -------------------------- Example 1 --------------------------
+    
+    PS C:\> {{ Add example code here }}
+    
+    {{ Add example description here }}
+    
+RELATED LINKS
 
 

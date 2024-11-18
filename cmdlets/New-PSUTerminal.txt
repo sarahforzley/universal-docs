@@ -7,7 +7,7 @@ SYNOPSIS
     
     
 SYNTAX
-    New-PSUTerminal [-AppToken <String>] [-ComputerName <String>] [-Credential <Variable>] [-Description <String>] [-Environment <String>] [-IdleTimeout <Int32>] [-Integrated] -Name <String> [-Role <String[]>] [-UseDefaultCredentials] [-KeepHistory] [<CommonParameters>]
+    New-PSUTerminal [-AppToken <String>] [-ComputerName <String>] [-Credential <Variable>] [-Description <String>] [-Environment <String>] [-IdleTimeout <Int32>] [-Integrated] -Name <String> [-Role <String[]>] [-UseDefaultCredentials] [-KeepHistory] [-TrustCertificate] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -107,6 +107,15 @@ PARAMETERS
         
     -KeepHistory [<SwitchParameter>]
         Whether to keep the history of all commands and output for terminals.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
         
         Required?                    false
         Position?                    named

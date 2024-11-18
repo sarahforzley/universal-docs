@@ -7,7 +7,7 @@ SYNOPSIS
     
     
 SYNTAX
-    Sync-PSUComponent [-AppToken <String>] [-ComputerName <String>] -Id <String> [-Integrated] [-UseDefaultCredentials] [-Broadcast] [<CommonParameters>]
+    Sync-PSUComponent [-AppToken <String>] [-ComputerName <String>] -Id <String> [-Integrated] [-UseDefaultCredentials] [-Broadcast] [-Credential <PSCredential>] [-TrustCertificate] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -62,6 +62,24 @@ PARAMETERS
         
     -Broadcast [<SwitchParameter>]
         Broadcast the sync across all nodes.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -Credential <PSCredential>
+        Credentials to login to the PowerShell Universal Management API.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
         
         Required?                    false
         Position?                    named

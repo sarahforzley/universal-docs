@@ -7,7 +7,7 @@ SYNOPSIS
     
     
 SYNTAX
-    New-UDSelect [[-Id] <String>] [[-Option] <ScriptBlock>] [[-Label] <String>] [[-OnChange] <Endpoint>] [[-DefaultValue] <Object>] [-Disabled] [-Multiple] [[-MaxWidth] <String>] [[-ClassName] <String>] [-FullWidth] [[-OnEnter] <Endpoint>] [[-Variant] <String>] [[-Icon] <Object>] [[-Sx] <Hashtable>] [<CommonParameters>]
+    New-UDSelect [[-Id] <String>] [[-Option] <ScriptBlock>] [[-Label] <String>] [[-OnChange] <Endpoint>] [[-DefaultValue] <Object>] [-Disabled] [-Multiple] [[-MaxWidth] <String>] [[-ClassName] <String>] [-FullWidth] [[-OnEnter] <Endpoint>] [[-Variant] <String>] [[-Icon] <Object>] [[-Sx] <Hashtable>] [-Checkbox] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -144,6 +144,15 @@ PARAMETERS
         Accept pipeline input?       false
         Accept wildcard characters?  false
         
+    -Checkbox [<SwitchParameter>]
+        Whether to display checkboxes when using multiselect.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+        
     <CommonParameters>
         This cmdlet supports the common parameters: Verbose, Debug,
         ErrorAction, ErrorVariable, WarningAction, WarningVariable,
@@ -210,6 +219,19 @@ OUTPUTS
     
     -------------------------- EXAMPLE 5 --------------------------
     
+    PS >New-UDSelect -Label 'Select' -Id 'select4' -Option {
+    PS >    New-UDSelectOption -Name "One" -Value 1
+    PS >    New-UDSelectOption -Name "Two" -Value 2
+    PS >    New-UDSelectOption -Name "Three" -Value 3
+    PS > } -Multiple -FullWidth -Checkbox
+    
+    Multiple with Checkboxes|A select that allows multiple selections with checkboxes.
+    
+    
+    
+    
+    -------------------------- EXAMPLE 6 --------------------------
+    
     PS >New-UDSelect -Label 'Select' -Id 'select5' -Option {
     PS >    New-UDSelectOption -Name "One" -Value 1
     PS >    New-UDSelectOption -Name "Two" -Value 2
@@ -221,7 +243,7 @@ OUTPUTS
     
     
     
-    -------------------------- EXAMPLE 6 --------------------------
+    -------------------------- EXAMPLE 7 --------------------------
     
     PS >New-UDSelect -Label 'Select' -Id 'select6' -Option {
     PS >    New-UDSelectOption -Name "One" -Value 1
@@ -234,7 +256,7 @@ OUTPUTS
     
     
     
-    -------------------------- EXAMPLE 7 --------------------------
+    -------------------------- EXAMPLE 8 --------------------------
     
     PS >New-UDSelect -Label 'Select' -Id 'select7' -Option {
     PS >    New-UDSelectGroup -Name "Category 1" -Option {

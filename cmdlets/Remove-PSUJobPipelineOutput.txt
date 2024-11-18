@@ -2,79 +2,80 @@
 NAME
     Remove-PSUJobPipelineOutput
     
+SYNOPSIS
+    Removes pipeline output for a job.
+    
+    
 SYNTAX
-    Remove-PSUJobPipelineOutput -JobId <long> [-ComputerName <string>] [-AppToken <string>] [-Credential <pscredential>] [-UseDefaultCredentials] [-Integrated] [-TrustCertificate] [<CommonParameters>]
+    Remove-PSUJobPipelineOutput [-AppToken <String>] [-ComputerName <String>] [-Credential <PSCredential>] [-Integrated] -JobId <Int64> [-TrustCertificate] [-UseDefaultCredentials] [<CommonParameters>]
     
     
+DESCRIPTION
+    {{ Fill in the Description }}
+    
+
 PARAMETERS
-    -AppToken <string>
+    -AppToken <String>
+        {{ Fill AppToken Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -ComputerName <string>
+    -ComputerName <String>
+        {{ Fill ComputerName Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      Uri
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -Credential <pscredential>
+    -Credential <PSCredential>
+        Credentials to login to the PowerShell Universal Management API.
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -Integrated
+    -Integrated [<SwitchParameter>]
+        {{ Fill Integrated Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -JobId <long>
+    -JobId <Int64>
+        {{ Fill JobId Description }}
         
         Required?                    true
-        Position?                    Named
-        Accept pipeline input?       true (ByValue)
-        Parameter set name           ById
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       True (ByValue)
         Accept wildcard characters?  false
         
-    -TrustCertificate
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -UseDefaultCredentials
+    -UseDefaultCredentials [<SwitchParameter>]
+        {{ Fill UseDefaultCredentials Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
     <CommonParameters>
@@ -83,19 +84,27 @@ PARAMETERS
         OutBuffer, PipelineVariable, and OutVariable. For more information, see
         about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
     
-    
 INPUTS
     System.Int64
+        
     
     
 OUTPUTS
     System.Object
+        
     
-ALIASES
-    None
     
-
-REMARKS
-    None
+NOTES
+    
+    
+        
+    
+    -------------------------- Example 1 --------------------------
+    
+    PS C:\> {{ Add example code here }}
+    
+    {{ Add example description here }}
+    
+RELATED LINKS
 
 

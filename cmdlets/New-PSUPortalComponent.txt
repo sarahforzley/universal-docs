@@ -2,109 +2,107 @@
 NAME
     New-PSUPortalComponent
     
+SYNOPSIS
+    Adds a new portal component.
+    
+    
 SYNTAX
-    New-PSUPortalComponent -Name <string> [-Description <string>] [-Title <string>] [-AvailableInBranch <string[]>] [-ComputerName <string>] [-AppToken <string>] [-Credential <pscredential>] [-UseDefaultCredentials] [-Integrated] [-TrustCertificate] [<CommonParameters>]
+    New-PSUPortalComponent [-AppToken <String>] [-AvailableInBranch <String[]>] [-ComputerName <String>] [-Credential <PSCredential>] [-Description <String>] [-Integrated] -Name <String> [-Title <String>] [-TrustCertificate] [-UseDefaultCredentials] [<CommonParameters>]
     
     
+DESCRIPTION
+    Adds a new portal component.
+    
+
 PARAMETERS
-    -AppToken <string>
+    -AppToken <String>
+        {{ Fill AppToken Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -AvailableInBranch <string[]>
+    -AvailableInBranch <String[]>
+        {{ Fill AvailableInBranch Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -ComputerName <string>
+    -ComputerName <String>
+        {{ Fill ComputerName Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      Uri
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -Credential <pscredential>
+    -Credential <PSCredential>
+        Credentials to login to the PowerShell Universal Management API.
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -Description <string>
+    -Description <String>
+        {{ Fill Description Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -Integrated
+    -Integrated [<SwitchParameter>]
+        {{ Fill Integrated Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -Name <string>
+    -Name <String>
+        {{ Fill Name Description }}
         
         Required?                    true
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -Title <string>
+    -Title <String>
+        {{ Fill Title Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -TrustCertificate
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -UseDefaultCredentials
+    -UseDefaultCredentials [<SwitchParameter>]
+        {{ Fill UseDefaultCredentials Description }}
         
         Required?                    false
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
     <CommonParameters>
@@ -113,19 +111,27 @@ PARAMETERS
         OutBuffer, PipelineVariable, and OutVariable. For more information, see
         about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
     
-    
 INPUTS
     None
+        
     
     
 OUTPUTS
     System.Object
+        
     
-ALIASES
-    None
     
-
-REMARKS
-    None
+NOTES
+    
+    
+        
+    
+    -------------------------- Example 1 --------------------------
+    
+    PS C:\> {{ Add example code here }}
+    
+    {{ Add example description here }}
+    
+RELATED LINKS
 
 

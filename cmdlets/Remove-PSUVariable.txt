@@ -7,9 +7,9 @@ SYNOPSIS
     
     
 SYNTAX
-    Remove-PSUVariable [-Variable] <Variable> [-AppToken <String>] [-ComputerName <String>] [-Integrated] [-UseDefaultCredentials] [-RemoveSecret] [<CommonParameters>]
+    Remove-PSUVariable [-Variable] <Variable> [-AppToken <String>] [-ComputerName <String>] [-Integrated] [-UseDefaultCredentials] [-RemoveSecret] [-Credential <PSCredential>] [-TrustCertificate] [<CommonParameters>]
     
-    Remove-PSUVariable [-AppToken <String>] [-ComputerName <String>] [-Integrated] [-UseDefaultCredentials] [-RemoveSecret] -Name <String> [<CommonParameters>]
+    Remove-PSUVariable [-AppToken <String>] [-ComputerName <String>] [-Integrated] [-UseDefaultCredentials] [-RemoveSecret] -Name <String> [-Credential <PSCredential>] [-TrustCertificate] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -78,6 +78,24 @@ PARAMETERS
         Position?                    named
         Default value                None
         Accept pipeline input?       True (ByValue)
+        Accept wildcard characters?  false
+        
+    -Credential <PSCredential>
+        Credentials to login to the PowerShell Universal Management API.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
     <CommonParameters>

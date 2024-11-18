@@ -7,11 +7,11 @@ SYNOPSIS
     
     
 SYNTAX
-    Get-PSUGitStatus [-AppToken <String>] [-ComputerName <String>] [-Integrated] -Commits [-Credential <PSCredential>] [-First <UInt64>] [-HttpProtocolVersion <Version>] [-IncludeTotalCount] [-Skip <UInt64>] [<CommonParameters>]
+    Get-PSUGitStatus [-AppToken <String>] [-ComputerName <String>] [-Integrated] -Commits [-Credential <PSCredential>] [-First <UInt64>] [-IncludeTotalCount] [-Skip <UInt64>] [-TrustCertificate] [-UseDefaultCredentials] [<CommonParameters>]
     
-    Get-PSUGitStatus [-AppToken <String>] [-ComputerName <String>] [-Integrated] [-Credential <PSCredential>] -EditInProgress [-First <UInt64>] [-HttpProtocolVersion <Version>] [-IncludeTotalCount] [-Skip <UInt64>] [<CommonParameters>]
+    Get-PSUGitStatus [-AppToken <String>] [-ComputerName <String>] [-Integrated] [-Credential <PSCredential>] -EditInProgress [-First <UInt64>] [-IncludeTotalCount] [-Skip <UInt64>] [-TrustCertificate] [-UseDefaultCredentials] [<CommonParameters>]
     
-    Get-PSUGitStatus [-AppToken <String>] [-ComputerName <String>] [-Integrated] [-Credential <PSCredential>] [-First <UInt64>] [-HttpProtocolVersion <Version>] [-IncludeTotalCount] [-Skip <UInt64>] -UncommittedChanges [<CommonParameters>]
+    Get-PSUGitStatus [-AppToken <String>] [-ComputerName <String>] [-Integrated] [-Credential <PSCredential>] [-First <UInt64>] [-IncludeTotalCount] [-Skip <UInt64>] -UncommittedChanges [-TrustCertificate] [-UseDefaultCredentials] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -56,7 +56,7 @@ PARAMETERS
         Accept wildcard characters?  false
         
     -Credential <PSCredential>
-        {{ Fill Credential Description }}
+        Credentials to login to the PowerShell Universal Management API.
         
         Required?                    false
         Position?                    named
@@ -75,15 +75,6 @@ PARAMETERS
         
     -First <UInt64>
         Gets only the specified number of objects. Enter the number of objects to get.
-        
-        Required?                    false
-        Position?                    named
-        Default value                None
-        Accept pipeline input?       False
-        Accept wildcard characters?  false
-        
-    -HttpProtocolVersion <Version>
-        {{ Fill HttpProtocolVersion Description }}
         
         Required?                    false
         Position?                    named
@@ -113,6 +104,24 @@ PARAMETERS
         {{ Fill UncommittedChanges Description }}
         
         Required?                    true
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -UseDefaultCredentials [<SwitchParameter>]
+        Whether to use default credentials when connecting to PowerShell Universal. Requires Windows authentication to be enabled.
+        
+        Required?                    false
         Position?                    named
         Default value                False
         Accept pipeline input?       False

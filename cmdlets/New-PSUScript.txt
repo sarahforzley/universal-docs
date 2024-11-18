@@ -7,11 +7,11 @@ SYNOPSIS
     
     
 SYNTAX
-    New-PSUScript [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-DisableManualInvocation] [-ManualTime <Int32>] [-MaxHistory <Int32>] -Name <String> [-Notes <String>] [-Parameter <ScriptParameter[]>] [-Path <String>] -ScriptBlock <ScriptBlock> [-Status {Draft | Pending_Review | Published | Disabled}] [-Tag <Tag[]>] [-ConcurrentJobs <Int32>] [-Environment <String>] [-TimeOut <Double>] [-Credential <Variable>] [-UseDefaultCredentials] [-Anonymous] [-Integrated] [-RetryLimit <Int32>] [-DiscardPipeline] [-LoadProfile] [-WorkingDirectory <String>] [-Role <String[]>] [<CommonParameters>]
+    New-PSUScript [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-DisableManualInvocation] [-ManualTime <Int32>] [-MaxHistory <Int32>] -Name <String> [-Notes <String>] [-Parameter <ScriptParameter[]>] [-Path <String>] -ScriptBlock <ScriptBlock> [-Status {Draft | Pending_Review | Published | Disabled}] [-Tag <Tag[]>] [-ConcurrentJobs <Int32>] [-Environment <String>] [-TimeOut <Double>] [-Credential <Variable>] [-UseDefaultCredentials] [-Integrated] [-RetryLimit <Int32>] [-DiscardPipeline] [-LoadProfile] [-WorkingDirectory <String>] [-Role <String[]>] [-AvailableInBranch <String[]>] [-PortalOutputType <PortalOutputType>] [-TrustCertificate] [<CommonParameters>]
     
-    New-PSUScript [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-DisableManualInvocation] [-ManualTime <Int32>] [-MaxHistory <Int32>] -Name <String> [-Notes <String>] [-Parameter <ScriptParameter[]>] -Path <String> [-Status {Draft | Pending_Review | Published | Disabled}] [-Tag <Tag[]>] [-ConcurrentJobs <Int32>] [-Environment <String>] [-TimeOut <Double>] [-Credential <Variable>] [-UseDefaultCredentials] [-Anonymous] [-Integrated] [-RetryLimit <Int32>] [-DiscardPipeline] [-LoadProfile] [-WorkingDirectory <String>] [-Role <String[]>] [<CommonParameters>]
+    New-PSUScript [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-DisableManualInvocation] [-ManualTime <Int32>] [-MaxHistory <Int32>] -Name <String> [-Notes <String>] [-Parameter <ScriptParameter[]>] -Path <String> [-Status {Draft | Pending_Review | Published | Disabled}] [-Tag <Tag[]>] [-ConcurrentJobs <Int32>] [-Environment <String>] [-TimeOut <Double>] [-Credential <Variable>] [-UseDefaultCredentials] [-Integrated] [-RetryLimit <Int32>] [-DiscardPipeline] [-LoadProfile] [-WorkingDirectory <String>] [-Role <String[]>] [-AvailableInBranch <String[]>] [-PortalOutputType <PortalOutputType>] [-TrustCertificate] [<CommonParameters>]
     
-    New-PSUScript [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-DisableManualInvocation] [-ManualTime <Int32>] [-MaxHistory <Int32>] [-Notes <String>] [-Parameter <ScriptParameter[]>] [-Path <String>] [-Status {Draft | Pending_Review | Published | Disabled}] [-Tag <Tag[]>] [-ConcurrentJobs <Int32>] [-Environment <String>] [-TimeOut <Double>] [-Credential <Variable>] [-UseDefaultCredentials] [-Anonymous] [-Integrated] [-RetryLimit <Int32>] [-DiscardPipeline] [-LoadProfile] [-WorkingDirectory <String>] -Command <String> -Module <String> [-Role <String[]>] [<CommonParameters>]
+    New-PSUScript [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-DisableManualInvocation] [-ManualTime <Int32>] [-MaxHistory <Int32>] [-Notes <String>] [-Parameter <ScriptParameter[]>] [-Status {Draft | Pending_Review | Published | Disabled}] [-Tag <Tag[]>] [-ConcurrentJobs <Int32>] [-Environment <String>] [-TimeOut <Double>] [-Credential <Variable>] [-UseDefaultCredentials] [-Integrated] [-RetryLimit <Int32>] [-DiscardPipeline] [-LoadProfile] [-WorkingDirectory <String>] -Command <String> -Module <String> [-Role <String[]>] [-AvailableInBranch <String[]>] [-PortalOutputType <PortalOutputType>] [-TrustCertificate] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -185,15 +185,6 @@ PARAMETERS
         Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -Anonymous [<SwitchParameter>]
-        Allows for execution of this script without authentication.
-        
-        Required?                    false
-        Position?                    named
-        Default value                False
-        Accept pipeline input?       False
-        Accept wildcard characters?  false
-        
     -Integrated [<SwitchParameter>]
         Executes the command internally rather than using the Management API. Only works when running script from within PowerShell Universal.
         
@@ -263,6 +254,33 @@ PARAMETERS
         Required?                    false
         Position?                    named
         Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -AvailableInBranch <String[]>
+        When specified, this script will only be available in the specified branches.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -PortalOutputType <PortalOutputType>
+        The type of portal output to display when running this script in the portal.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
         Accept pipeline input?       False
         Accept wildcard characters?  false
         

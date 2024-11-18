@@ -7,11 +7,11 @@ SYNOPSIS
     
     
 SYNTAX
-    Get-PSUSchedule [-Id] <Int64> [-AppToken <String>] [-ComputerName <String>] [-Integrated] [-UseDefaultCredentials] [<CommonParameters>]
+    Get-PSUSchedule [-Id] <Int64> [-AppToken <String>] [-ComputerName <String>] [-Integrated] [-UseDefaultCredentials] [-Credential <PSCredential>] [-TrustCertificate] [<CommonParameters>]
     
-    Get-PSUSchedule [-Identity] <Identity> [-AppToken <String>] [-ComputerName <String>] [-Integrated] [-UseDefaultCredentials] [<CommonParameters>]
+    Get-PSUSchedule [-Identity] <Identity> [-AppToken <String>] [-ComputerName <String>] [-Integrated] [-UseDefaultCredentials] [-Credential <PSCredential>] [-TrustCertificate] [<CommonParameters>]
     
-    Get-PSUSchedule [-Script] <Script> [-AppToken <String>] [-ComputerName <String>] [-Integrated] [-UseDefaultCredentials] [<CommonParameters>]
+    Get-PSUSchedule [-Script] <Script> [-AppToken <String>] [-ComputerName <String>] [-Integrated] [-UseDefaultCredentials] [-Credential <PSCredential>] [-TrustCertificate] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -75,6 +75,24 @@ PARAMETERS
         
     -UseDefaultCredentials [<SwitchParameter>]
         Use default credentials when connecting to the management API
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -Credential <PSCredential>
+        Credentials to login to the PowerShell Universal Management API.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
         
         Required?                    false
         Position?                    named

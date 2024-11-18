@@ -7,7 +7,7 @@ SYNOPSIS
     
     
 SYNTAX
-    Invoke-PSUTerminalCommand [-AppToken <String>] -Command <String> [-ComputerName <String>] [-Integrated] -TerminalInstance <TerminalInstance> [-UseDefaultCredentials] [<CommonParameters>]
+    Invoke-PSUTerminalCommand [-AppToken <String>] -Command <String> [-ComputerName <String>] [-Integrated] -TerminalInstance <TerminalInstance> [-UseDefaultCredentials] [-Credential <PSCredential>] [-TrustCertificate] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -62,6 +62,24 @@ PARAMETERS
         
     -UseDefaultCredentials [<SwitchParameter>]
         The terminal configuration to start. Use Get-PSUTerminal to return terminal configurations.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -Credential <PSCredential>
+        Credentials to login to the PowerShell Universal Management API.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
         
         Required?                    false
         Position?                    named

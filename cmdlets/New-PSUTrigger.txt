@@ -7,7 +7,7 @@ SYNOPSIS
     
     
 SYNTAX
-    New-PSUTrigger [-AppToken <String>] [-ComputerName <String>] [-Dashboard <Dashboard>] [-Environment <String>] -EventType {JobCanceled | JobFailed | JobCompleted | JobStarted | JobFeedbackRequested | ServerStarted | ServerStopped | DashboardStarted | DashboardStopped} -Name <String> [-Script <Script>] -TriggerScript <Script> [-UseDefaultCredentials] [-Delay <Int32>] [-Integrated] [-ProtectRule <String>] [-Computer <String>] [-Condition <ScriptBlock>] [<CommonParameters>]
+    New-PSUTrigger [-AppToken <String>] [-ComputerName <String>] [-Dashboard <Dashboard>] [-Environment <String>] -EventType {JobCanceled | JobFailed | JobCompleted | JobStarted | JobFeedbackRequested | ServerStarted | ServerStopped | DashboardStarted | DashboardStopped} -Name <String> [-Script <Script>] -TriggerScript <Script> [-UseDefaultCredentials] [-Delay <Int32>] [-Integrated] [-Computer <String>] [-Condition <ScriptBlock>] [-Credential <PSCredential>] [-TrustCertificate] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -118,15 +118,6 @@ PARAMETERS
         Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -ProtectRule <String>
-        The name of the PowerShell Protect rule that executes this trigger.
-        
-        Required?                    false
-        Position?                    named
-        Default value                None
-        Accept pipeline input?       False
-        Accept wildcard characters?  false
-        
     -Computer <String>
         The computer or queue to run this trigger on.
         
@@ -142,6 +133,24 @@ PARAMETERS
         Required?                    false
         Position?                    named
         Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -Credential <PSCredential>
+        Credentials to login to the PowerShell Universal Management API.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
         Accept pipeline input?       False
         Accept wildcard characters?  false
         

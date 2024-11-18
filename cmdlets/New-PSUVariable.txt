@@ -7,11 +7,11 @@ SYNOPSIS
     
     
 SYNTAX
-    New-PSUVariable [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-DisableRunAsSupport] [-InputObject <Object>] [-Integrated] -Name <String> [-Type <String>] [-UseDefaultCredentials] [-Value <Object>] -Vault <String> [-Database] [-Force] [-Role <String[]>] [<CommonParameters>]
+    New-PSUVariable [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-DisableRunAsSupport] [-InputObject <Object>] [-Integrated] -Name <String> [-Type <String>] [-UseDefaultCredentials] [-Value <Object>] -Vault <String> [-Database] [-Force] [-Role <String[]>] [-Credential <PSCredential>] [-Scope <VariableScope>] [-Tag <Tag[]>] [-TrustCertificate] [<CommonParameters>]
     
-    New-PSUVariable [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-DisableRunAsSupport] [-InputObject <Object>] [-Integrated] -Name <String> [-Type <String>] [-UseDefaultCredentials] [-Database] [-Force] [-Role <String[]>] [<CommonParameters>]
+    New-PSUVariable [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-DisableRunAsSupport] [-InputObject <Object>] [-Integrated] -Name <String> [-Type <String>] [-UseDefaultCredentials] [-Database] [-Force] [-Role <String[]>] [-Credential <PSCredential>] [-Scope <VariableScope>] [-Tag <Tag[]>] [-TrustCertificate] [<CommonParameters>]
     
-    New-PSUVariable [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-DisableRunAsSupport] [-Integrated] -Name <String> [-Type <String>] [-UseDefaultCredentials] [-Value <Object>] [-Database] [-Force] [-Role <String[]>] [<CommonParameters>]
+    New-PSUVariable [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-DisableRunAsSupport] [-Integrated] -Name <String> [-Type <String>] [-UseDefaultCredentials] [-Value <Object>] [-Database] [-Force] [-Role <String[]>] [-Credential <PSCredential>] [-Scope <VariableScope>] [-Tag <Tag[]>] [-TrustCertificate] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -142,6 +142,42 @@ PARAMETERS
         Required?                    false
         Position?                    named
         Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -Credential <PSCredential>
+        Credentials to login to the PowerShell Universal Management API.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -Scope <VariableScope>
+        The variable scope for this variable. Global variable changes will cause resources to restart. Script scoped variables will not.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -Tag <Tag[]>
+        Tags for this variable.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
         Accept pipeline input?       False
         Accept wildcard characters?  false
         

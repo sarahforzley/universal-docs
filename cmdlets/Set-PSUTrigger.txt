@@ -7,9 +7,9 @@ SYNOPSIS
     
     
 SYNTAX
-    Set-PSUTrigger [-Id] <Int64> [-AppToken <String>] [-ComputerName <String>] [-Dashboard <String>] [-Environment <String>] [-EventType {JobCanceled | JobFailed | JobCompleted | JobStarted | JobFeedbackRequested | ServerStarted | ServerStopped | DashboardStarted | DashboardStopped}] [-Name <String>] [-Script <String>] [-TriggerScript <String>] [-UseDefaultCredentials] [-Integrated] [<CommonParameters>]
+    Set-PSUTrigger [-Id] <Int64> [-AppToken <String>] [-ComputerName <String>] [-Dashboard <String>] [-Environment <String>] [-EventType {JobCanceled | JobFailed | JobCompleted | JobStarted | JobFeedbackRequested | ServerStarted | ServerStopped | DashboardStarted | DashboardStopped}] [-Name <String>] [-Script <String>] [-TriggerScript <String>] [-UseDefaultCredentials] [-Integrated] [-Credential <PSCredential>] [-TrustCertificate] [<CommonParameters>]
     
-    Set-PSUTrigger [-Trigger] <Trigger> [-AppToken <String>] [-ComputerName <String>] [-Dashboard <String>] [-Environment <String>] [-EventType {JobCanceled | JobFailed | JobCompleted | JobStarted | JobFeedbackRequested | ServerStarted | ServerStopped | DashboardStarted | DashboardStopped}] [-Name <String>] [-Script <String>] [-TriggerScript <String>] [-UseDefaultCredentials] [-Integrated] [<CommonParameters>]
+    Set-PSUTrigger [-Trigger] <Trigger> [-AppToken <String>] [-ComputerName <String>] [-Dashboard <String>] [-Environment <String>] [-EventType {JobCanceled | JobFailed | JobCompleted | JobStarted | JobFeedbackRequested | ServerStarted | ServerStopped | DashboardStarted | DashboardStopped}] [-Name <String>] [-Script <String>] [-TriggerScript <String>] [-UseDefaultCredentials] [-Integrated] [-Credential <PSCredential>] [-TrustCertificate] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -118,6 +118,24 @@ PARAMETERS
         
     -Integrated [<SwitchParameter>]
         Executes the command internally rather than using the Management API. Only works when running script from within PowerShell Universal.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -Credential <PSCredential>
+        Credentials to login to the PowerShell Universal Management API.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
         
         Required?                    false
         Position?                    named

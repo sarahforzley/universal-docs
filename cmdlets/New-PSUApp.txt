@@ -7,11 +7,11 @@ SYNOPSIS
     
     
 SYNTAX
-    New-PSUApp [-AppToken <String>] [-Authenticated] [-AutoDeploy] [-BaseUrl <String>] [-Command <String>] [-Component <DashboardComponent[]>] [-ComputerName <String>] [-Credential <String>] [-Description <String>] [-DisableAutoStart] [-DisableErrorToast] [-DisableInteractiveHost] [-DisableStartupLog] [-Environment <String>] [-FavIcon <String>] [-Framework <DashboardFramework>] [-GrantAppToken] [-IdleTimeout <Int32>] [-Integrated] [-Maintenance] [-Module <String>] -Name <String> [-Role <String[]>] [-SessionTimeout <Int32>] [-Tag <Tag[]>] [-UseDefaultCredentials] [-VerboseErrorMessages] [-ComputerGroup <String[]>] [-OnSessionTimeout <ScriptBlock>] [<CommonParameters>]
+    New-PSUApp [-AppToken <String>] [-Authenticated] [-AutoDeploy] [-BaseUrl <String>] [-Command <String>] [-Component <DashboardComponent[]>] [-ComputerName <String>] [-Credential <String>] [-Description <String>] [-DisableAutoStart] [-DisableErrorToast] [-DisableInteractiveHost] [-DisableStartupLog] [-Environment <String>] [-FavIcon <String>] [-GrantAppToken] [-IdleTimeout <Int32>] [-Integrated] [-Maintenance] [-Module <String>] -Name <String> [-Role <String[]>] [-SessionTimeout <Int32>] [-Tag <Tag[]>] [-UseDefaultCredentials] [-VerboseErrorMessages] [-ComputerGroup <String[]>] [-OnSessionTimeout <ScriptBlock>] [-AvailableInBranch <String[]>] [-TrustCertificate] [<CommonParameters>]
     
-    New-PSUApp [-AppToken <String>] [-Authenticated] [-AutoDeploy] [-BaseUrl <String>] [-Component <DashboardComponent[]>] [-ComputerName <String>] -Content <ScriptBlock> [-Credential <String>] [-Description <String>] [-DisableAutoStart] [-DisableErrorToast] [-DisableInteractiveHost] [-DisableStartupLog] [-Environment <String>] [-FavIcon <String>] [-Framework <DashboardFramework>] [-GrantAppToken] [-IdleTimeout <Int32>] [-Integrated] [-Maintenance] -Name <String> [-Role <String[]>] [-SessionTimeout <Int32>] [-Tag <Tag[]>] [-UseDefaultCredentials] [-VerboseErrorMessages] [-ComputerGroup <String[]>] [-OnSessionTimeout <ScriptBlock>] [<CommonParameters>]
+    New-PSUApp [-AppToken <String>] [-Authenticated] [-AutoDeploy] [-BaseUrl <String>] [-Component <DashboardComponent[]>] [-ComputerName <String>] -Content <ScriptBlock> [-Credential <String>] [-Description <String>] [-DisableAutoStart] [-DisableErrorToast] [-DisableInteractiveHost] [-DisableStartupLog] [-Environment <String>] [-FavIcon <String>] [-GrantAppToken] [-IdleTimeout <Int32>] [-Integrated] [-Maintenance] -Name <String> [-Role <String[]>] [-SessionTimeout <Int32>] [-Tag <Tag[]>] [-UseDefaultCredentials] [-VerboseErrorMessages] [-ComputerGroup <String[]>] [-OnSessionTimeout <ScriptBlock>] [-AvailableInBranch <String[]>] [-TrustCertificate] [<CommonParameters>]
     
-    New-PSUApp [-AppToken <String>] [-Authenticated] [-AutoDeploy] [-BaseUrl <String>] [-Component <DashboardComponent[]>] [-ComputerName <String>] [-Credential <String>] [-Description <String>] [-DisableAutoStart] [-DisableErrorToast] [-DisableInteractiveHost] [-DisableStartupLog] [-Environment <String>] [-FavIcon <String>] [-FilePath <String>] [-Framework <DashboardFramework>] [-GrantAppToken] [-IdleTimeout <Int32>] [-Integrated] [-Maintenance] -Name <String> [-Role <String[]>] [-SessionTimeout <Int32>] [-Tag <Tag[]>] [-UseDefaultCredentials] [-VerboseErrorMessages] [-ComputerGroup <String[]>] [-OnSessionTimeout <ScriptBlock>] [<CommonParameters>]
+    New-PSUApp [-AppToken <String>] [-Authenticated] [-AutoDeploy] [-BaseUrl <String>] [-Component <DashboardComponent[]>] [-ComputerName <String>] [-Credential <String>] [-Description <String>] [-DisableAutoStart] [-DisableErrorToast] [-DisableInteractiveHost] [-DisableStartupLog] [-Environment <String>] [-FavIcon <String>] [-FilePath <String>] [-GrantAppToken] [-IdleTimeout <Int32>] [-Integrated] [-Maintenance] -Name <String> [-Role <String[]>] [-SessionTimeout <Int32>] [-Tag <Tag[]>] [-UseDefaultCredentials] [-VerboseErrorMessages] [-ComputerGroup <String[]>] [-OnSessionTimeout <ScriptBlock>] [-AvailableInBranch <String[]>] [-TrustCertificate] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -172,15 +172,6 @@ PARAMETERS
         Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -Framework <DashboardFramework>
-        Not used. Only present for backwards compatibility.
-        
-        Required?                    false
-        Position?                    named
-        Default value                None
-        Accept pipeline input?       False
-        Accept wildcard characters?  false
-        
     -GrantAppToken [<SwitchParameter>]
         Whether to grant an app token to users of this app. You can use the app token within your app to access resources of PSU as the user logging in.
         
@@ -295,6 +286,24 @@ PARAMETERS
         Required?                    false
         Position?                    named
         Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -AvailableInBranch <String[]>
+        When specified, this app will only be displayed and running the specified branches.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
         Accept pipeline input?       False
         Accept wildcard characters?  false
         

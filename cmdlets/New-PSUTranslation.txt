@@ -7,7 +7,7 @@ SYNOPSIS
     
     
 SYNTAX
-    New-PSUTranslation [-AppToken <String>] [-ComputerName <String>] [-Integrated] -LanguageId <String> [-Name <String>] [-Strings <Hashtable>] [-UseDefaultCredentials] [<CommonParameters>]
+    New-PSUTranslation [-AppToken <String>] [-ComputerName <String>] [-Integrated] -LanguageId <String> [-Name <String>] [-Strings <Hashtable>] [-UseDefaultCredentials] [-Credential <PSCredential>] [-TrustCertificate] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -71,6 +71,24 @@ PARAMETERS
         
     -UseDefaultCredentials [<SwitchParameter>]
         Whether to use default Windows credentials when connecting to PSU.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -Credential <PSCredential>
+        Credentials to login to the PowerShell Universal Management API.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
         
         Required?                    false
         Position?                    named
