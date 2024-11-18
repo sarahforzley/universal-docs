@@ -4,6 +4,60 @@ description: Changelog for PowerShell Universal.
 
 # Changelog
 
+## 5.0.16 - 11/18/2024
+
+#### Admin Console
+
+* Renamed Functions tab in app editor to Module
+* Fixed an issue creating a CRON schedule on the script page (#4035)
+* Fixed an issue with the Run button on the health checks page (#4024)
+* Added Start Time, Created Time and Elapsed Time to the jobs table (#4028)
+* Fixed an issue where form authentication was shown on the login page when disabled (#4041)
+* Added reset branding button (#4030)
+* Fixed an issue where non-persistent cache data had missing time stamps
+* Added Available in Branch to UI
+* Improved memory usage output on process page (#3828)
+* Fixed an issue with the failed login configuration page
+* Added variable value form (#4049)
+* Fixed an issue where System would show in the permission identity selector (#4040)
+* Fixed an issue where Reader role could execute scripts in admin console (#4061)
+* Fixed an issue where the admin console could exhaust SQL connections (#4056)
+
+#### APIs
+
+* Added -Computer to Send-PSUEvent (Invoke-PSUCommand)
+* Fixed an issue where variables were retained between invocations in a persistent runspace
+* Fixed an issue executing endpoints that use -Module-Command (#4053)
+
+#### Apps
+
+* Added -Checkbox to New-UDSelect (#1996)
+* Fixed an issue with New-UDAutocomplete -Multiple layout (#3756)
+* Added -SortType numeric to New-UDTableColumn (#3837)
+* Fixed an issue with -Locale in New-UDDatePicker (#4017)
+* Fixed margin of UDTextbox with an icon (#4051)
+
+#### Automation
+
+* Fixed an issue scheduling the groom job past 59 minute intervals (#4031)
+* Fixed an issue renaming schedules (#4034)
+
+#### Module
+
+* Fixed an issue where module help was not updating properly.
+* Fixed an issue with Get-PSUCache -Key case sensitivity (#4043)
+
+#### Portal
+
+* Links now open in a new tab (#4027)
+* Added disabled and roles settings for portal (#4037)
+* Fixed an issue with portal authentication redirects (#4010)
+
+#### Platform
+
+* Fixed an issue grooming jobs when using PostgreSQL (#4032)
+* System log level can now be set in the admin console
+
 ## 5.0.15 - 11/5/2024
 
 #### Admin Console
