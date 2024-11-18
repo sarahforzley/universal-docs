@@ -7,7 +7,7 @@ SYNOPSIS
     
     
 SYNTAX
-    Set-PSUGitSetting [-AppToken <String>] [-Branch <String>] [-ComputerName <String>] [-Credential <PSCredential>] [-ExternalGit] [-GitCredential <PSCredential>] [-HttpProtocolVersion <Version>] [-Integrated] [-Interval <Int32>] [-Mode {Manual | Automatic}] [-ProxyUrl <String>] [-Remote <String>] [-SyncBehavior {TwoWay | OneWay | PushOnly}] [<CommonParameters>]
+    Set-PSUGitSetting [-AppToken <String>] [-Branch <String>] [-ComputerName <String>] [-Credential <PSCredential>] [-ExternalGit] [-GitCredential <PSCredential>] [-Integrated] [-Interval <Int32>] [-Mode {Manual | Automatic}] [-ProxyUrl <String>] [-Remote <String>] [-SyncBehavior {TwoWay | OneWay | PushOnly}] [-TrustCertificate] [-UseDefaultCredentials] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -69,15 +69,6 @@ PARAMETERS
         Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -HttpProtocolVersion <Version>
-        The HTTP protocol version to use when connecting to the PowerShell Universal server.
-        
-        Required?                    false
-        Position?                    named
-        Default value                None
-        Accept pipeline input?       False
-        Accept wildcard characters?  false
-        
     -Integrated [<SwitchParameter>]
         Executes the command internally rather than using the Management API. Only works when running script from within PowerShell Universal.
         
@@ -129,6 +120,24 @@ PARAMETERS
         Required?                    false
         Position?                    named
         Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -UseDefaultCredentials [<SwitchParameter>]
+        Whether to use default credentials when connecting to PowerShell Universal. Requires Windows authentication to be enabled.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
         Accept pipeline input?       False
         Accept wildcard characters?  false
         

@@ -7,13 +7,17 @@ SYNOPSIS
     
     
 SYNTAX
-    Set-PSUVariable [-Id] <Int64> [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-Integrated] [-Name <String>] [-UseDefaultCredentials] [-Value <String>] [<CommonParameters>]
+    Set-PSUVariable [-Id] <Int64> [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-Integrated] [-Name <String>] [-UseDefaultCredentials] [-Value <String>] [-Credential <PSCredential>] [-TrustCertificate] [<CommonParameters>]
     
-    Set-PSUVariable [-Id] <Int64> [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-InputObject <Object>] [-Integrated] [-Name <String>] [-UseDefaultCredentials] [<CommonParameters>]
+    Set-PSUVariable [-Id] <Int64> [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-InputObject <Object>] [-Integrated] [-Name <String>] [-UseDefaultCredentials] [-Credential <PSCredential>] [-TrustCertificate] [<CommonParameters>]
     
-    Set-PSUVariable [-Variable] <Variable> [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-InputObject <Object>] [-Integrated] [-Name <String>] [-UseDefaultCredentials] [<CommonParameters>]
+    Set-PSUVariable [-Id] <Int64> [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-Integrated] [-Name <String>] [-UseDefaultCredentials] [-Credential <PSCredential>] [-Password <String>] [-TrustCertificate] [-UserName <String>] [<CommonParameters>]
     
-    Set-PSUVariable [-Variable] <Variable> [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-Integrated] [-Name <String>] [-UseDefaultCredentials] [-Value <String>] [<CommonParameters>]
+    Set-PSUVariable [-Variable] <Variable> [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-InputObject <Object>] [-Integrated] [-Name <String>] [-UseDefaultCredentials] [-Credential <PSCredential>] [-TrustCertificate] [<CommonParameters>]
+    
+    Set-PSUVariable [-Variable] <Variable> [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-Integrated] [-Name <String>] [-UseDefaultCredentials] [-Value <String>] [-Credential <PSCredential>] [-TrustCertificate] [<CommonParameters>]
+    
+    Set-PSUVariable [-Variable] <Variable> [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-Integrated] [-Name <String>] [-UseDefaultCredentials] [-Credential <PSCredential>] [-Password <String>] [-TrustCertificate] [-UserName <String>] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -109,6 +113,42 @@ PARAMETERS
         Position?                    0
         Default value                None
         Accept pipeline input?       True (ByValue)
+        Accept wildcard characters?  false
+        
+    -Credential <PSCredential>
+        Credentials to login to the PowerShell Universal Management API.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -Password <String>
+        {{ Fill Password Description }}
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -UserName <String>
+        {{ Fill UserName Description }}
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
     <CommonParameters>

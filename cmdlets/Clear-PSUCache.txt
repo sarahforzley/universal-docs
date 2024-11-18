@@ -7,7 +7,7 @@ SYNOPSIS
     
     
 SYNTAX
-    Clear-PSUCache [-AppToken <String>] [-ComputerName <String>] [-Integrated] [-UseDefaultCredentials] [<CommonParameters>]
+    Clear-PSUCache [-AppToken <String>] [-ComputerName <String>] [-Integrated] [-UseDefaultCredentials] [-Credential <PSCredential>] [-TrustCertificate] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -44,6 +44,24 @@ PARAMETERS
         
     -UseDefaultCredentials [<SwitchParameter>]
         Use the default credentials for the current user.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -Credential <PSCredential>
+        Credentials to login to the PowerShell Universal service.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Skips certificate checks.
         
         Required?                    false
         Position?                    named

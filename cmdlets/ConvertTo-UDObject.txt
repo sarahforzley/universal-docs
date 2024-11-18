@@ -2,29 +2,35 @@
 NAME
     ConvertTo-UDObject
     
+SYNOPSIS
+    {{ Fill in the Synopsis }}
+    
+    
 SYNTAX
-    ConvertTo-UDObject [[-InputObject] <Object>] -Process <scriptblock> [<CommonParameters>]
+    ConvertTo-UDObject [[-InputObject] <Object>] -Process <ScriptBlock> [<CommonParameters>]
     
     
+DESCRIPTION
+    {{ Fill in the Description }}
+    
+
 PARAMETERS
     -InputObject <Object>
+        {{ Fill InputObject Description }}
         
         Required?                    false
         Position?                    0
-        Accept pipeline input?       true (ByValue)
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Default value                None
+        Accept pipeline input?       True (ByValue)
         Accept wildcard characters?  false
         
-    -Process <scriptblock>
+    -Process <ScriptBlock>
+        {{ Fill Process Description }}
         
         Required?                    true
-        Position?                    Named
-        Accept pipeline input?       false
-        Parameter set name           (All)
-        Aliases                      None
-        Dynamic?                     false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
     <CommonParameters>
@@ -33,19 +39,27 @@ PARAMETERS
         OutBuffer, PipelineVariable, and OutVariable. For more information, see
         about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216). 
     
-    
 INPUTS
     System.Object
+        
     
     
 OUTPUTS
     System.Object
+        
     
-ALIASES
-    None
     
-
-REMARKS
-    None
+NOTES
+    
+    
+        
+    
+    -------------------------- Example 1 --------------------------
+    
+    PS C:\> {{ Add example code here }}
+    
+    {{ Add example description here }}
+    
+RELATED LINKS
 
 

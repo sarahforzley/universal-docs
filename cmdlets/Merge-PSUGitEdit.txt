@@ -7,7 +7,7 @@ SYNOPSIS
     
     
 SYNTAX
-    Merge-PSUGitEdit [-AppToken <String>] [-ComputerName <String>] [-Credential <PSCredential>] [-HttpProtocolVersion <Version>] [-Integrated] -Message <String> [-Paths <String[]>] [<CommonParameters>]
+    Merge-PSUGitEdit [-AppToken <String>] [-ComputerName <String>] [-Credential <PSCredential>] [-Integrated] -Message <String> [-Paths <String[]>] [-TrustCertificate] [-UseDefaultCredentials] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -42,15 +42,6 @@ PARAMETERS
         Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -HttpProtocolVersion <Version>
-        The HTTP protocol version to use when connecting to the server.
-        
-        Required?                    false
-        Position?                    named
-        Default value                None
-        Accept pipeline input?       False
-        Accept wildcard characters?  false
-        
     -Integrated [<SwitchParameter>]
         For use when running within PowerShell Universal.
         
@@ -75,6 +66,24 @@ PARAMETERS
         Required?                    false
         Position?                    named
         Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -UseDefaultCredentials [<SwitchParameter>]
+        Whether to use default credentials when connecting to PowerShell Universal. Requires Windows authentication to be enabled.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
         Accept pipeline input?       False
         Accept wildcard characters?  false
         

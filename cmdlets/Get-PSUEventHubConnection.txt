@@ -7,7 +7,7 @@ SYNOPSIS
     
     
 SYNTAX
-    Get-PSUEventHubConnection [-AppToken <String>] [-ComputerName <String>] [-Integrated] [-Local] [-UseDefaultCredentials] [<CommonParameters>]
+    Get-PSUEventHubConnection [-AppToken <String>] [-ComputerName <String>] [-Integrated] [-UseDefaultCredentials] [-Active] [-Credential <PSCredential>] [-Hub <String>] [-RemoteComputerName <String>] [-RemoteDomainName <String>] [-RemoteUserName <String>] [-ServerComputerName <String>] [-TrustCertificate] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -42,8 +42,8 @@ PARAMETERS
         Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -Local [<SwitchParameter>]
-        {{ Fill Local Description }}
+    -UseDefaultCredentials [<SwitchParameter>]
+        Whether to use the current user's default credentials to access PowerShell Universal. Requires Windows authentication to be enabled.
         
         Required?                    false
         Position?                    named
@@ -51,8 +51,71 @@ PARAMETERS
         Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -UseDefaultCredentials [<SwitchParameter>]
-        {{ Fill UseDefaultCredentials Description }}
+    -Active [<SwitchParameter>]
+        Returns active connections.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -Credential <PSCredential>
+        Credentials to login to the PowerShell Universal Management API.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -Hub <String>
+        Returns connections for the specified hub.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -RemoteComputerName <String>
+        Returns connections for the remote computer name.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -RemoteDomainName <String>
+        Returns connections for the remote domain name.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -RemoteUserName <String>
+        Returns connections for the remote user name.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -ServerComputerName <String>
+        Returns connections to the PowerShell Universal server.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
         
         Required?                    false
         Position?                    named

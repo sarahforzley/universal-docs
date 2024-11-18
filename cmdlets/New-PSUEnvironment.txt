@@ -7,7 +7,7 @@ SYNOPSIS
     
     
 SYNTAX
-    New-PSUEnvironment [-AppToken <String>] [-Arguments <String>] [-ComputerName <String>] [-Modules <String[]>] -Name <String> [-PSModulePath <String[]>] -Path <String> [-PersistentRunspace] [-Variables <String[]>] [-UseDefaultCredentials] [-Integrated] [-StartupScript <String[]>] [-Version <String>] [-RunspaceRecycling] [-HighPerformanceRunspacePool] [-MaxRunspaces <Int32>] [-EnableDebugger] [-Credential <Variable>] [-MaxVirtualMemory <Int64>] [-RecycleSchedule <String>] [-Description <String>] [-DisableImplicitWinCompat] [-Minimal] [-ProcessStartupScript <String>] [<CommonParameters>]
+    New-PSUEnvironment [-AppToken <String>] [-Arguments <String>] [-ComputerName <String>] [-Modules <String[]>] -Name <String> [-PSModulePath <String[]>] -Path <String> [-PersistentRunspace] [-Variables <String[]>] [-UseDefaultCredentials] [-Integrated] [-StartupScript <String[]>] [-Version <String>] [-RunspaceRecycling] [-MaxRunspaces <Int32>] [-EnableDebugger] [-Credential <Variable>] [-MaxVirtualMemory <Int64>] [-RecycleSchedule <String>] [-Description <String>] [-DisableImplicitWinCompat] [-Minimal] [-ProcessStartupScript <String>] [-Disabled] [-TrustCertificate] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -145,15 +145,6 @@ PARAMETERS
         Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -HighPerformanceRunspacePool [<SwitchParameter>]
-        {{ Fill HighPerformanceRunspacePool Description }}
-        
-        Required?                    false
-        Position?                    named
-        Default value                False
-        Accept pipeline input?       False
-        Accept wildcard characters?  false
-        
     -MaxRunspaces <Int32>
         {{ Fill MaxRunspaces Description }}
         
@@ -232,6 +223,24 @@ PARAMETERS
         Required?                    false
         Position?                    named
         Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -Disabled [<SwitchParameter>]
+        Environment is disabled.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
         Accept pipeline input?       False
         Accept wildcard characters?  false
         

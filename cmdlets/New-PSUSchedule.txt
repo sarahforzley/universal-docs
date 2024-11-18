@@ -7,11 +7,11 @@ SYNOPSIS
     
     
 SYNTAX
-    New-PSUSchedule [-Script] <Script> [-AppToken <String>] [-ComputerName <String>] -Continuous [-Credential <Variable>] [-Delay <TimeSpan>] [-DelayHour <Int32>] [-DelayMinute <Int32>] [-DelaySecond <Int32>] [-TimeZone <String>] [-Environment <String>] [-Description <String>] [-Name <String>] [-UseDefaultCredentials] [-Condition <ScriptBlock>] [-Integrated] [-Paused] [-Timeout <Int32>] [-RandomDelay] [<CommonParameters>]
+    New-PSUSchedule [-Script] <Script> [-AppToken <String>] [-ComputerName <String>] -Continuous [-Credential <Variable>] [-Delay <TimeSpan>] [-DelayHour <Int32>] [-DelayMinute <Int32>] [-DelaySecond <Int32>] [-TimeZone <String>] [-Environment <String>] [-Description <String>] [-Name <String>] [-UseDefaultCredentials] [-Condition <ScriptBlock>] [-Integrated] [-Paused] [-Timeout <Int32>] [-RandomDelay] [-AvailableInBranch <String[]>] [-Computer <String>] [-Parameters <Hashtable>] [-RandomDelayMaximum <Int32>] [-TrustCertificate] [<CommonParameters>]
     
-    New-PSUSchedule [-Script] <Script> [-Cron] <String> [-AppToken <String>] [-ComputerName <String>] [-Credential <Variable>] [-TimeZone <String>] [-Environment <String>] [-Description <String>] [-Name <String>] [-UseDefaultCredentials] [-Condition <ScriptBlock>] [-Integrated] [-Paused] [-Timeout <Int32>] [-RandomDelay] [<CommonParameters>]
+    New-PSUSchedule [-Script] <Script> [-Cron] <String> [-AppToken <String>] [-ComputerName <String>] [-Credential <Variable>] [-TimeZone <String>] [-Environment <String>] [-Description <String>] [-Name <String>] [-UseDefaultCredentials] [-Condition <ScriptBlock>] [-Integrated] [-Paused] [-Timeout <Int32>] [-RandomDelay] [-AvailableInBranch <String[]>] [-Computer <String>] [-Parameters <Hashtable>] [-RandomDelayMaximum <Int32>] [-TrustCertificate] [<CommonParameters>]
     
-    New-PSUSchedule [-Script] <Script> [-AppToken <String>] [-ComputerName <String>] [-Credential <Variable>] [-TimeZone <String>] [-Environment <String>] [-OneTime <DateTime>] [-Description <String>] [-Name <String>] [-UseDefaultCredentials] [-Condition <ScriptBlock>] [-Integrated] [-Paused] [-Timeout <Int32>] [-RandomDelay] [<CommonParameters>]
+    New-PSUSchedule [-Script] <Script> [-AppToken <String>] [-ComputerName <String>] [-Credential <Variable>] [-TimeZone <String>] [-Environment <String>] [-OneTime <DateTime>] [-Description <String>] [-Name <String>] [-UseDefaultCredentials] [-Condition <ScriptBlock>] [-Integrated] [-Paused] [-Timeout <Int32>] [-RandomDelay] [-AvailableInBranch <String[]>] [-Computer <String>] [-Parameters <Hashtable>] [-RandomDelayMaximum <Int32>] [-TrustCertificate] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -201,6 +201,51 @@ PARAMETERS
         
     -RandomDelay [<SwitchParameter>]
         A random delay will be applied to when this script is started. The random delay will be between 0 and 60 seconds.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -AvailableInBranch <String[]>
+        Branches that this schedule will run in.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -Computer <String>
+        Computer or computer group that will run this schedule.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -Parameters <Hashtable>
+        A hashtable of parameters for this schedule to pass to the target script.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -RandomDelayMaximum <Int32>
+        The maximum number of seconds to delay.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
         
         Required?                    false
         Position?                    named

@@ -7,7 +7,7 @@ SYNOPSIS
     
     
 SYNTAX
-    New-PSUHealthCheck [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-DisableUnix] [-DisableWindows] [-Disabled] [-Integrated] -Name <String> [-Options <Hashtable>] [-ScriptBlock <ScriptBlock>] [-UseDefaultCredentials] [<CommonParameters>]
+    New-PSUHealthCheck [-AppToken <String>] [-ComputerName <String>] [-Description <String>] [-DisableUnix] [-DisableWindows] [-Disabled] [-Integrated] -Name <String> [-Options <Hashtable>] [-ScriptBlock <ScriptBlock>] [-UseDefaultCredentials] [-Credential <PSCredential>] [-TrustCertificate] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -107,6 +107,24 @@ PARAMETERS
         
     -UseDefaultCredentials [<SwitchParameter>]
         Use the default credentials for the current user.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -Credential <PSCredential>
+        Credentials to login to the PowerShell Universal Management API.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
         
         Required?                    false
         Position?                    named

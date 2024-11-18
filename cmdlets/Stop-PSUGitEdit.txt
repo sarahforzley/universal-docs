@@ -7,7 +7,7 @@ SYNOPSIS
     
     
 SYNTAX
-    Stop-PSUGitEdit [-AppToken <String>] [-ComputerName <String>] [-Credential <PSCredential>] [-HttpProtocolVersion <Version>] [-Integrated] [-Paths <String[]>] [<CommonParameters>]
+    Stop-PSUGitEdit [-AppToken <String>] [-ComputerName <String>] [-Credential <PSCredential>] [-Integrated] [-Paths <String[]>] [-TrustCertificate] [-UseDefaultCredentials] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -42,15 +42,6 @@ PARAMETERS
         Accept pipeline input?       False
         Accept wildcard characters?  false
         
-    -HttpProtocolVersion <Version>
-        The HTTP protocol version to use when calling the PowerShell Universal Management API.
-        
-        Required?                    false
-        Position?                    named
-        Default value                None
-        Accept pipeline input?       False
-        Accept wildcard characters?  false
-        
     -Integrated [<SwitchParameter>]
         Executes the command internally rather than using the Management API. Only works when running script from within PowerShell Universal.
         
@@ -66,6 +57,24 @@ PARAMETERS
         Required?                    false
         Position?                    named
         Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -UseDefaultCredentials [<SwitchParameter>]
+        {{ Fill UseDefaultCredentials Description }}
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
         Accept pipeline input?       False
         Accept wildcard characters?  false
         

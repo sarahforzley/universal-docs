@@ -7,7 +7,7 @@ SYNOPSIS
     
     
 SYNTAX
-    Sync-PSUConfiguration [-AppToken <String>] [-ComputerName <String>] [-Integrated] [-UseDefaultCredentials] [-Reset] [-File <String>] [<CommonParameters>]
+    Sync-PSUConfiguration [-AppToken <String>] [-ComputerName <String>] [-Integrated] [-UseDefaultCredentials] [-Reset] [-File <String>] [-Credential <PSCredential>] [-TrustCertificate] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -66,6 +66,24 @@ PARAMETERS
         Required?                    false
         Position?                    named
         Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -Credential <PSCredential>
+        Credentials to login to the PowerShell Universal Management API.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
         Accept pipeline input?       False
         Accept wildcard characters?  false
         

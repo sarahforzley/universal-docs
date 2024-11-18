@@ -7,15 +7,17 @@ SYNOPSIS
     
     
 SYNTAX
-    Get-PSUJob [-Id] <Int64> [-AppToken <String>] [-ComputerName <String>] [-First <UInt64>] [-IncludeTotalCount] [-Integrated] [-OrderBy {Id | StartTime | EndTime}] [-OrderDirection {Descending | Ascending}] [-Skip <UInt64>] [-Status {Queued | Running | Completed | Failed | WaitingOnFeedback | Canceled | Canceling | Historical | Active | TimedOut | Warning}] [-UseDefaultCredentials] [<CommonParameters>]
+    Get-PSUJob [-Id] <Int64> [-AppToken <String>] [-ComputerName <String>] [-First <UInt64>] [-IncludeTotalCount] [-Integrated] [-OrderBy {Id | StartTime | EndTime}] [-OrderDirection {Descending | Ascending}] [-Skip <UInt64>] [-Status {Queued | Running | Completed | Failed | WaitingOnFeedback | Canceled | Canceling | Historical | Active | TimedOut | Warning}] [-UseDefaultCredentials] [-Credential <PSCredential>] [-HideChildren <Boolean>] [-TrustCertificate] [<CommonParameters>]
     
-    Get-PSUJob [-Identity] <Identity> [-AppToken <String>] [-ComputerName <String>] [-First <UInt64>] [-IncludeTotalCount] [-Integrated] [-OrderBy {Id | StartTime | EndTime}] [-OrderDirection {Descending | Ascending}] [-Skip <UInt64>] [-Status {Queued | Running | Completed | Failed | WaitingOnFeedback | Canceled | Canceling | Historical | Active | TimedOut | Warning}] [-UseDefaultCredentials] [<CommonParameters>]
+    Get-PSUJob [-Identity] <Identity> [-AppToken <String>] [-ComputerName <String>] [-First <UInt64>] [-IncludeTotalCount] [-Integrated] [-OrderBy {Id | StartTime | EndTime}] [-OrderDirection {Descending | Ascending}] [-Skip <UInt64>] [-Status {Queued | Running | Completed | Failed | WaitingOnFeedback | Canceled | Canceling | Historical | Active | TimedOut | Warning}] [-UseDefaultCredentials] [-Credential <PSCredential>] [-HideChildren <Boolean>] [-HideScheduled <Boolean>] [-HideTriggered <Boolean>] [-TrustCertificate] [<CommonParameters>]
     
-    Get-PSUJob [-Script] <Script> [-AppToken <String>] [-ComputerName <String>] [-First <UInt64>] [-IncludeTotalCount] [-Integrated] [-OrderBy {Id | StartTime | EndTime}] [-OrderDirection {Descending | Ascending}] [-Skip <UInt64>] [-Status {Queued | Running | Completed | Failed | WaitingOnFeedback | Canceled | Canceling | Historical | Active | TimedOut | Warning}] [-UseDefaultCredentials] [<CommonParameters>]
+    Get-PSUJob [-Script] <Script> [-AppToken <String>] [-ComputerName <String>] [-First <UInt64>] [-IncludeTotalCount] [-Integrated] [-OrderBy {Id | StartTime | EndTime}] [-OrderDirection {Descending | Ascending}] [-Skip <UInt64>] [-Status {Queued | Running | Completed | Failed | WaitingOnFeedback | Canceled | Canceling | Historical | Active | TimedOut | Warning}] [-UseDefaultCredentials] [-Credential <PSCredential>] [-HideChildren <Boolean>] [-HideScheduled <Boolean>] [-HideTriggered <Boolean>] [-TrustCertificate] [<CommonParameters>]
     
-    Get-PSUJob [-AppToken <String>] [-ComputerName <String>] [-First <UInt64>] [-IncludeTotalCount] [-Integrated] [-OrderBy {Id | StartTime | EndTime}] [-OrderDirection {Descending | Ascending}] [-Skip <UInt64>] [-Status {Queued | Running | Completed | Failed | WaitingOnFeedback | Canceled | Canceling | Historical | Active | TimedOut | Warning}] [-UseDefaultCredentials] -RunId <Guid> [<CommonParameters>]
+    Get-PSUJob [-AppToken <String>] [-ComputerName <String>] [-First <UInt64>] [-IncludeTotalCount] [-Integrated] [-OrderBy {Id | StartTime | EndTime}] [-OrderDirection {Descending | Ascending}] [-Skip <UInt64>] [-Status {Queued | Running | Completed | Failed | WaitingOnFeedback | Canceled | Canceling | Historical | Active | TimedOut | Warning}] [-UseDefaultCredentials] -RunId <Guid> [-Credential <PSCredential>] [-HideChildren <Boolean>] [-TrustCertificate] [<CommonParameters>]
     
-    Get-PSUJob [-AppToken <String>] [-ComputerName <String>] [-First <UInt64>] [-IncludeTotalCount] [-Integrated] [-OrderBy {Id | StartTime | EndTime}] [-OrderDirection {Descending | Ascending}] [-Skip <UInt64>] [-Status {Queued | Running | Completed | Failed | WaitingOnFeedback | Canceled | Canceling | Historical | Active | TimedOut | Warning}] [-UseDefaultCredentials] -Schedule <Schedule> [<CommonParameters>]
+    Get-PSUJob [-AppToken <String>] [-ComputerName <String>] [-First <UInt64>] [-IncludeTotalCount] [-Integrated] [-OrderBy {Id | StartTime | EndTime}] [-OrderDirection {Descending | Ascending}] [-Skip <UInt64>] [-Status {Queued | Running | Completed | Failed | WaitingOnFeedback | Canceled | Canceling | Historical | Active | TimedOut | Warning}] [-UseDefaultCredentials] -Schedule <Schedule> [-Credential <PSCredential>] [-HideChildren <Boolean>] [-HideScheduled <Boolean>] [-HideTriggered <Boolean>] [-TrustCertificate] [<CommonParameters>]
+    
+    Get-PSUJob [-AppToken <String>] [-ComputerName <String>] [-First <UInt64>] [-IncludeTotalCount] [-Integrated] [-OrderBy {Id | StartTime | EndTime}] [-OrderDirection {Descending | Ascending}] [-Skip <UInt64>] [-Status {Queued | Running | Completed | Failed | WaitingOnFeedback | Canceled | Canceling | Historical | Active | TimedOut | Warning}] [-UseDefaultCredentials] [-Credential <PSCredential>] [-HideChildren <Boolean>] [-HideScheduled <Boolean>] [-HideTriggered <Boolean>] [-TrustCertificate] [<CommonParameters>]
     
     
 DESCRIPTION
@@ -156,6 +158,51 @@ PARAMETERS
         Position?                    named
         Default value                None
         Accept pipeline input?       True (ByValue)
+        Accept wildcard characters?  false
+        
+    -Credential <PSCredential>
+        Credentials to login to the PowerShell Universal Management API.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -HideChildren <Boolean>
+        Does not return child jobs.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -HideScheduled <Boolean>
+        Does not return scheduled jobs.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -HideTriggered <Boolean>
+        Does not return triggered job.
+        
+        Required?                    false
+        Position?                    named
+        Default value                None
+        Accept pipeline input?       False
+        Accept wildcard characters?  false
+        
+    -TrustCertificate [<SwitchParameter>]
+        Whether the cmdlet should ignore certificate issues.
+        
+        Required?                    false
+        Position?                    named
+        Default value                False
+        Accept pipeline input?       False
         Accept wildcard characters?  false
         
     <CommonParameters>
