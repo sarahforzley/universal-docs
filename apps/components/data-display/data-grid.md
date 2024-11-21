@@ -209,6 +209,32 @@ New-UDDataGrid -LoadRows {
 }
 ```
 
+## Selection
+
+You can enable row selection using the `-CheckboxSelection` parameter to display checkboxes for the rows to select. Row selection requires a deterministic ID for the data rows provided. In the below example, you will see each row has a specific ID specified.&#x20;
+
+```powershell
+New-UDApp -Content { 
+    $Rows = 1..100 | % {
+        @{ Id = $_; Name = 'Adam'; Number = Get-Random}
+    } 
+    New-UDDataGrid -id DataGrid -LoadRows {  
+    $Rows| Out-UDDataGridData -Context $EventData -TotalRows $Rows.Length
+} -Columns @(
+    New-UDDataGridColumn -Field name
+    New-UDDataGridColumn -Field number
+) -AutoHeight $true -Pagination -CheckboxSelection -CheckboxSelectionVisibleOnly -DisableRowSelectionOnClick
+```
+
+You can access selected data with the `-OnSelectionChange` event handler or by retrieving the row data via `Get-UDElement`.&#x20;
+
+```powershell
+New-UDButton -Text 'Get Selected Rows' -OnClick {
+   $Value = Get-UDElement -ID 'DataGrid'
+   Show-UDToast $Value.selection
+}
+```
+
 ## Custom Export
 
 To override the default export functionality, use the `-OnExport` event handler. `$EventData` will be the same context object used for `-LoadRows`. You should use `Out-UDDataGridExport` to return the data from `-OnExport`.
