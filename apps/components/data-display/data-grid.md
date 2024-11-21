@@ -110,6 +110,8 @@ New-UDDataGrid -LoadRows {
 
 ## Filtering
 
+The data grid supports filtering data based on each column. Multiple filters can be defined to allow the user to narrow down the displayed data set. By default, the `Out-UDDataGridData` cmdlet implements filtering for local data. When using a remote data source, like SQL, it is suggested to implement custom filtering to improve user experience and performance.
+
 ![](<../../../.gitbook/assets/image (374).png>)
 
 ### Filter Data Structure
