@@ -182,6 +182,23 @@ $Parameter
 $ExecutionTime
 ```
 
+## ValidateSet&#x20;
+
+The `ValidateSet` attribute is used to enforce which values can be passed to a parameter. Learn about [ValidateSet here.](https://duckduckgo.com/?q=validateset\&ia=web) PowerShell Universal will automatically create a drop-down menu with the values provided to the `ValidateSet` attribute for parameters.&#x20;
+
+For example, a script could define a param block as follows.&#x20;
+
+```powershell
+param(
+    [ValidateSet("Steve", "Mary")]
+    [string]$Name
+)
+```
+
+The result is shown below.&#x20;
+
+<figure><img src="../../.gitbook/assets/image (64).png" alt=""><figcaption><p>ValidateSet Attribute</p></figcaption></figure>
+
 ## Passing Parameters from PowerShell
 
 You can pass parameters from PowerShell using the `Invoke-PSUScript` cmdlet. This cmdlet supports dynamic parameters. If you have a `param` block on your script, these parameters will automatically be added to `Invoke-PSUScript`.
