@@ -87,15 +87,18 @@ The `-LoadRows` parameter is used to return data for the data grid. Table state 
 | PageSize | The number of records in a page.                                         | Integer   |
 | Sort     | The sort options for the table                                           | Hashtable |
 
-### Paging
+## Paging
 
-To implement paging, you can access the `page` and `pageSize` properties of the `$EventData` variable. Out-UDDataGridData automatically implements paging.
+To implement paging, you can access the `page` and `pageSize` properties of the `$EventData` variable. If you are using a remote data source, you will want to implement custom paging logic. Below is an example of using the paging properties to page through the rows locally. Depending on your data source (e.g. SQL), you may page through data differently.
 
 ```powershell
 New-UDDataGrid -LoadRows {  
     $Rows = 1..100 | % {
         @{ Name = 'Adam'; Number = Get-Random}
     } 
+    
+    $Rows = $Rows | Select-Object -First $EventData.pageSize -Skip ($EventData.Page * $EventData.PageSize)
+    
     $Rows| Out-UDDataGridData -Context $EventData -TotalRows $Rows.Length
 } -Columns @(
     New-UDDataGridColumn -Field name
@@ -103,40 +106,111 @@ New-UDDataGrid -LoadRows {
 ) -AutoHeight $true -Pagination
 ```
 
-### Filtering
+`Out-UDDataGridData` automatically implements paging, and you do not need to do the above if you have all your data in memory. The above is just used for demonstration purposes.&#x20;
+
+## Filtering
 
 ![](<../../../.gitbook/assets/image (374).png>)
 
-The filter hashtable is included in the `$EventData` for the `-LoadRows` event handler when a filter is defined. The hashtable has a structure as follows.
+### Filter Data Structure
+
+The filter object is included in the `$EventData` for the `-LoadRows` event handler when a filter is defined. The object has a structure as follows.
 
 ```powershell
 @{
     items = @(
         @{ 
-            columnField = "Name"
-            overatorValue = "contains"
+            field = "Name"
+            operator = "contains"
             value = "test"
         }
     )
-    linkOperator = "and"
+    logicOperator = "and"
+    quickFilterValues = @("test")
+    quickFilterLogicOperator = "and"
 }
 ```
 
+
+
 #### Items
 
-The items property contains an array of columns, operators and values. You can use these to filter your data.
+The items property contains a collection of fields, operators and values. You can use these to filter your data.
 
-| Property      | Description                                          | Type   |
-| ------------- | ---------------------------------------------------- | ------ |
-| ColumnField   | The name of the field to filter                      | String |
-| OperatorValue | The type of operator to use when filtering the data. | String |
-| Value         | The value used to filter                             | Object |
+| Property | Description                                          | Type   |
+| -------- | ---------------------------------------------------- | ------ |
+| Field    | The name of the field to filter                      | String |
+| Operator | The type of operator to use when filtering the data. | String |
+| Value    | The value used to filter                             | Object |
 
-#### LinkOperator
+#### LogicOperator
 
-The link operator field is used to specify the link between the filters. This can be `and` or `or`.
+The logic operator field is used to specify the link between the filters. This can be `and` or `or`.
 
-### Sorting
+#### QuickFilterValues
+
+Contains a collection of quick filter values that you can chose how to apply to your data.&#x20;
+
+#### QuickFilterLogicOperator
+
+Contains the logic operator for the quick filter values specified by the user. This can be `and` or `or`.&#x20;
+
+### Custom Filter
+
+The `Out-UDDataGridData` cmdlet provides an implmentation of filtering for static data. If you use this cmdlet, you do not need to implement filtering manually. If you have a remote data source, you will want to provide a custom implementation for filtering. Below is an example of using the filter structure in `$EventData` to eliminate rows based on the filters provided by the user.&#x20;
+
+```powershell
+New-UDDataGrid -LoadRows {  
+    $Rows = 1..100 | % {
+        @{ Name = 'Adam'; Number = Get-Random}
+    }
+
+    foreach($filter in $eventData.Filter.items)
+    {
+        if ($filter.operator -eq 'equals')
+        {
+            $Rows = $Rows | Where-Object $filter.field -eq $filter.value
+        }
+        elseif ($filter.operator -eq 'contains')
+        {
+            $Rows = $Rows | Where-Object $filter.field -match $filter.value
+        }
+    }
+
+    $Rows| Out-UDDataGridData -Context $EventData -TotalRows $Rows.Length
+} -Columns @(
+    New-UDDataGridColumn -Field name
+    New-UDDataGridColumn -Field number
+) -AutoHeight $true
+```
+
+### Custom Quick Filter
+
+The quick filter is a similar to a simple search box. You can enable quick filtering with the `-ShowQuickFilter` parameter on `New-UDDataGrid`. A search box will appear in the top right of the data grid. When the user enters a value in the data grid, the quick filter information will be provided.&#x20;
+
+Below is an example of how to use quick filters. `Out-UDDataGridData` implements quick filtering and is not required when using local data. The below is done for demonstration only.&#x20;
+
+```powershell
+New-UDDataGrid -LoadRows {  
+    $Rows = 1..100 | % {
+        @{ Name = 'Adam'; Number = Get-Random}
+    }
+
+    foreach($filter in $eventData.QuickFilterValues)
+    {
+        $Rows = $Rows | Where-Object $filter.field -match $filter
+    }
+
+    $Rows| Out-UDDataGridData -Context $EventData -TotalRows $Rows.Length
+} -Columns @(
+    New-UDDataGridColumn -Field name
+    New-UDDataGridColumn -Field number
+) -AutoHeight $true
+```
+
+
+
+## Sorting
 
 ![](<../../../.gitbook/assets/image (389).png>)
 
