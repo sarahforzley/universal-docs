@@ -8,7 +8,7 @@ description: Receive client events from the PowerShell Universal server.
 Event Hubs require a [license](../licensing.md).&#x20;
 {% endhint %}
 
-Event Hubs provide the ability to connect client to the PowerShell Universal server. Once connected, the PowerShell Universal server can send messages to the connected clients and they will run a local PowerShell script block.
+Event Hubs let you connect the client to the PowerShell Universal server. Once connected, the PowerShell Universal server can send messages to the connected clients so that they run a local PowerShell script block.
 
 ## Creating an Event Hub
 
@@ -20,10 +20,10 @@ The agent process is responsible for responding to Event Hub requests. You can l
 
 ### agent.json
 
-After installing the agent, you will need to configure the client by using an `agent.json` file. This file should be created in `%ProgramData%\PowerShellUniversal`. Changes to this file require a restart of the Agent service.
+After installing the agent, you need to configure the client with an `agent.json` file. Create this file in `%ProgramData%\PowerShellUniversal`. Changes to this file require a restart of the Agent service.
 
 {% hint style="warning" %}
-The installer will not create the folder or file automatically.&#x20;
+The installer does not create the folder or file automatically.&#x20;
 {% endhint %}
 
 This JSON file configures the Agent to connect to the hub and run scripts when invoked.
@@ -43,11 +43,11 @@ This JSON file configures the Agent to connect to the hub and run scripts when i
 
 ### Options
 
-The below options can be included in the `agent.json` file.
+The below options can be included in the `agent.json` file:
 
 #### Connections
 
-These are the connections to Event Hubs. Each connection can contain it's own URL, hub, authentication and script to execute.
+These are the connections to Event Hubs. Each connection can contain its own URL, hub, authentication and script to execute.
 
 #### URL (Required)
 
@@ -59,15 +59,15 @@ The name of the Event Hub.
 
 #### AppToken
 
-The app token used to authentication against the hub.
+The app token used to authenticate against the hub.
 
 #### UseDefaultCredentials
 
-Windows Authentication will be used to authenticate against the hub.
+Windows Authentication authenticates against the hub.
 
 #### ScriptPath
 
-The script to execute when an event is received. This script is read into memory and not from disk. Variables such as `$PSScriptRoot` are currently not supported. This is optional as event hubs can also run commands directly.
+The script to execute when an event is received. This script is read into memory and not from disk. Variables such as `$PSScriptRoot` are not currently supported. This is optional, as event hubs can also run commands directly.
 
 ## Send Events
 
@@ -77,7 +77,7 @@ From within the PowerShell Universal server, you can send events from a hub to c
 Send-PSUEvent -Hub 'MyHub' -Data "Hello!"
 ```
 
-The `-Data` parameter accepts an object and will be serialized using CLIXML and send to the client. The data will be deserialized before passing to the script block.
+The `-Data` parameter accepts an object and is serialized using CLIXML, then sent to the client. The client deserializes the data before passing to the script block.
 
 You can also run commands. This does not require defining a script on the event hub client. You can also use the `Invoke-PSUCommand` alias to mimic native PowerShell behavior.
 
@@ -100,10 +100,10 @@ Show-UDToast $Result
 ## Example: Running Scripts on Remote Machines
 
 {% hint style="info" %}
-This example provides a way to run scripts on remote machines without having to install another instance of PowerShell Universal.
+This example provides a way to run scripts on remote machines without installing another instance of PowerShell Universal.
 {% endhint %}
 
-This example allows for sending scripts to remote machines and executing them with a generic event hub script.&#x20;
+This example allows you to send scripts to remote machines and execute them with a generic event hub script.&#x20;
 
 First, create an event hub in PowerShell Universal.  This example does not use authentication.
 
@@ -138,7 +138,7 @@ param($Name)
 Start-Process $Name
 ```
 
-Finally, add another script that sends the event down to the client. This could be from an API or an App as well. It uses `Get-PSUEventHubConnection` to get the target computer’s connection ID and then sends an event with the contents of a script and any parameters for that script. Because the script on event hub side is generic, it will just run whatever is passed to it.
+Finally, add another script that sends the event down to the client. This could be from an API or an App. It uses `Get-PSUEventHubConnection` to get the target computer’s connection ID and then sends an event with the contents of a script and any parameters for that script. Because the script on the event hub side is generic, it will run whatever is passed to it.
 
 ```powershell
 param($TargetComputer, $ProcessName)
