@@ -337,7 +337,9 @@ For single users and small teams, it may not be necessary to have more than a si
 
 Even single users and small teams may find it advantageous to employ a staging, or dev, branch. This branch will receive changes during development. A standalone instance of PowerShell Universal will be configured to run against this dev branch so that users can validate changes before pushing to production.&#x20;
 
-A separate PowerShell Universal instance can then be configured to point to a main, or production, branch that will receive updates via merges or Pull Requests in a system like GitHub. In this configuration, it is possible to use one-way git sync to pull changes from main but never push from the platform. This also prevents most merge conflicts as they will be addressed in the dev branch.&#x20;
+When using a staging branch configuration, the PowerShell Universal environments are completely separate. They use a different database and scheduler. Data such as identities, app tokens and job history are not shared across the environments.
+
+A separate PowerShell Universal instance can then be configured to point to a main, or production, branch that will receive updates via merges or Pull Requests in a system like GitHub. In this configuration, it is possible to use one-way git sync to pull changes from main but never push from the platform. This also prevents most merge conflicts as they will be addressed in the dev branch or via the merge tool in the source repository.&#x20;
 
 * main - Production branch that receives changes from pull requests of the dev branch
 * dev - The staging branch used to accept commits and validate changes before pushing to master.&#x20;
@@ -354,6 +356,8 @@ PowerShell Universal provides [developer licenses](../licensing.md) to avoid hav
 
 In this type of configuration, local development is ideal because the developers will work on their local PowerShell Universal instance within their feature branch. When the feature is complete, they will create a Pull or Merge request in the source repository to move changes into the dev branch. Testing will be completed on the dev branch before merging to production.&#x20;
 
+Similar to a main\dev branching strategy, all PowerShell Universal instances will be isolated and will not share a database or scheduler.&#x20;
+
 Once a set of features is ready for production, a Pull or Merge request will be made from dev to the main branch.&#x20;
 
 * main - Production branch that will only receive changes from dev
@@ -364,7 +368,7 @@ Once a set of features is ready for production, a Pull or Merge request will be 
 
 In large teams, additional levels of branching may be necessary. Branches for releases or hotfixes may be important to isolate upcoming releases and bug fixes from new feature development. As users develop new features, other developers can be working on patching existing releases or preparing the next release without accepting changes coming in from new feature work. An optional staging branch could also be employed to provide a QA environment that is isolated from development. This would mimic the production environment more closely and avoid accepting changes directly to the branch.&#x20;
 
-In this configuration, production environments could be pinned to release or hotfix branches. When a new release comes out, PowerShell Universal would have to sync with the new branch. The benefit of such a configuration is the ability to quickly change versions in the event of unintended consquences of changes in the release.&#x20;
+In this configuration, production environments could be pinned to release or hotfix branches. When a new release comes out, PowerShell Universal would have to sync with the new branch. The benefit of such a configuration is the ability to quickly change versions in the event of unintended consequences of changes in the release.&#x20;
 
 {% hint style="warning" %}
 PowerShell Universal currently has limited support for switching branches on live systems. We recommend switching the branch and restarting the PowerShell Universal service to avoid issues.&#x20;
@@ -375,5 +379,5 @@ PowerShell Universal currently has limited support for switching branches on liv
 * dev - Development branch that receives changes from feature branches but is not changed directly
 * feature - Feature branch that is committed to directly by developers and merged to dev when ready
 * release - A versioned release branch that contains a set of features and fixes. Created off of the main branch.&#x20;
-* hotfix - A child branch of a release that contains fixes. This could be considered a feature branch but is created from a release rather than the main branch.&#x20;
+* hotfix - A child branch of a release that contains fixes. This could be considered a release branch but is created from a release rather than the main branch.&#x20;
 
