@@ -10,15 +10,15 @@ The admin console has been rebuilt using Blazor for ASP.NET. The look and feel a
 
 ## Portal
 
-The [PowerShell Universal Portal](broken-reference) provides a simple to use access point for consumers of PSU resources.  Resources can be assigned by role and will be grouped by tags in a searchable interface without the complexities of the admin console.&#x20;
+The [PowerShell Universal Portal](broken-reference) provides a simple-to-use access point for consumers of PSU resources. You can assign resources by role, and they will be grouped by tags in a searchable interface without the complexities of the admin console.&#x20;
 
 ### Pages and Widgets
 
-Portal [Pages ](portal/portal-pages.md)and [Widgets ](portal/portal-widgets/)provide easy to use UI components that can be visually positioned on pages that then can be assigned to roles. Widgets are built using Blazor and PowerShell, accept parameters and are interactive.
+Portal [Pages ](portal/portal-pages.md)and [Widgets ](portal/portal-widgets/)provide easy-to-use UI components that you can visually position on pages, which can be assigned to roles. Widgets are built using Blazor and PowerShell accept parameters, and they are interactive.
 
 ## Script Library
 
-PowerShell Universal now ships with built in modules that can be install directly into the running instance to add resources without having to write code.&#x20;
+PowerShell Universal now ships with built-in modules that you can install directly into the running instance to add resources without writing code.&#x20;
 
 The [Script Library is open source](https://github.com/ironmansoftware/scripts) and contributions to the library will ship with the product.&#x20;
 
@@ -36,9 +36,9 @@ PowerShell Universal v5 is built on .NET 8 and PowerShell 7.4.
 
 ## gRPC Cmdlets
 
-The Universal module now uses gRPC for all communication with the system. gRPC is an interprocess communication technology that is fast and runs over HTTP. By unifying on a single technology, the cmdlets now take advantage of all the granular privileges and helps reduce technical debt in the platform.&#x20;
+The Universal module now uses gRPC for all communication with the system. gRPC is an interprocess communication technology that is fast and runs over HTTP. By unifying on a single technology, the cmdlets now take advantage of all the granular privileges and help reduce technical debt in the platform.&#x20;
 
 ## Windows PowerShell 5.1 and PowerShell 7 Environments
 
-The Agent environment has been replaced with Windows PowerShell 5.1 and PowerShell 7 environments. These environments host the PowerShell engine but allow for better control of assembly loading to ensure more modules are compatible with PowerShell Universal. While pwsh.exe is still supported, we suggest utilizing PowerShell 7 when possible. The Windows PowerShell 5.1 environment is now a requirement for running this version of PowerShell and powershell.exe is no longer supported.
+The Agent environment has been replaced with Windows PowerShell 5.1 and PowerShell 7 environments. These environments host the PowerShell engine, but they allow for better control of assembly loading to ensure more modules are compatible with PowerShell Universal. While pwsh.exe is still supported, we suggest using PowerShell 7 when possible. The Windows PowerShell 5.1 environment is now a requirement for running this version of PowerShell, and powershell.exe is no longer supported.
 
