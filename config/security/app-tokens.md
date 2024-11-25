@@ -4,7 +4,7 @@ description: App tokens for accessing PowerShell Universal APIs.
 
 # App Tokens
 
-PowerShell Universal app tokens can be used with both [custom API endpoints](broken-reference) and the [management API](../management-api.md). The management API uses the standard Administrator, Operator and Reader roles. The custom API app tokens can utilize custom roles as well as the built in ones.
+You can use PowerShell Universal app tokens with both [custom API endpoints](broken-reference) and the [management API](../management-api.md). The management API uses the standard Administrator, Operator and Reader roles. The custom API app tokens can utilize custom roles as well as the built-in ones.
 
 You can grant App Tokens to using the Admin Console or you can use the Management API directly.
 
@@ -14,13 +14,13 @@ To grant a token in the Admin Console, navigate to Security \ Tokens. Click the 
 
 ![](<../../.gitbook/assets/image (473).png>)
 
-When you click Grant App Token, you will be provided with a dialog that allows you to specify the Identity, Role and expiration time of the token.
+When you click Grant App Token, a dialog allows you to specify the Identity, Role and expiration time of the token.
 
 ![App Token options.](<../../.gitbook/assets/image (449).png>)
 
 ## Management API
 
-You can also grant app tokens to users from the management API. To grant an App Token programmatically using the API, you can do the following.
+You can also grant app tokens to users from the management API. To grant an App Token programmatically using the API, you can do the following:
 
 ```
 PS C:\Users\adamr> Invoke-RestMethod http://localhost:5000/api/v1/signin -Method POST -Body (@{ username = 'admin'; password = 'test' } | ConvertTo-Json) -SessionVariable Session -ContentType 'application/json'
@@ -41,7 +41,7 @@ expiration  : 26/06/2021 17:24:25
 revokedDate : 01/01/0001 00:00:00
 ```
 
-Administrators can grant app tokens to any user by specifying the user's identity ID. In order to grant an app token to an identity via the REST API, the user needs to have a defined role. The user is defined with the Operator role and thus their App Token will be granted access based on that role.
+Administrators can grant app tokens to any user by specifying the user's identity ID. To grant an app token to an identity via the REST API, the user needs a defined role. The Operator role defines the user, and their App Token will be granted access based on that role.
 
 ![](<../../.gitbook/assets/image (377).png>)
 
@@ -65,9 +65,9 @@ revokedDate : 01/01/0001 00:00:00
 
 ## Migrating App Tokens
 
-You can migrate app tokens between systems by using the management API. This is helpful when developing for high availability scenarios.
+You can migrate app tokens between systems using the management API. This is helpful when developing for high availability scenarios.
 
-The following is an example of the POST that is required to create an existing app token in any PSU instance. Note that the signing key must be the same between the instances. You need a valid app token in the target system to create the migrated tokens.
+The following is an example of the POST required to create an existing app token in any PSU instance. Note that the signing key must be the same between the instances. You need a valid app token in the target system to create the migrated tokens.
 
 ```powershell
 Invoke-RestMethod http://localhost:5000/api/v1/apptoken -Method POST -Body (@{
@@ -85,4 +85,4 @@ Invoke-RestMethod http://localhost:5000/api/v1/apptoken -Method POST -Body (@{
 
 ## Enhanced App Token Security
 
-When enhanced app token security is enabled, token values are only accessible once they are created. They are hashed and the hash value is stored in the database rather than the token. You will use the token the same way as any other token.
+When enhanced app token security is enabled, token values are only accessible upon creation. They are hashed and the database stores the hash value rather than the token. You use the token the same way as any other token.
