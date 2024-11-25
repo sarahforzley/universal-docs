@@ -339,6 +339,10 @@ Even single users and small teams may find it advantageous to employ a staging, 
 
 When using a staging branch configuration, the PowerShell Universal environments are completely separate. They use a different database and scheduler. Data such as identities, app tokens and job history are not shared across the environments.
 
+{% hint style="info" %}
+Each instance of PowerShell Universal requires a [license](../licensing.md). In this configuration, two licenses would be required.&#x20;
+{% endhint %}
+
 A separate PowerShell Universal instance can then be configured to point to a main, or production, branch that will receive updates via merges or Pull Requests in a system like GitHub. In this configuration, it is possible to use one-way git sync to pull changes from main but never push from the platform. This also prevents most merge conflicts as they will be addressed in the dev branch or via the merge tool in the source repository.&#x20;
 
 * main - Production branch that receives changes from pull requests of the dev branch
@@ -351,7 +355,7 @@ When considering teams with more than a couple of developers, a more complex bra
 In medium size teams, it may be desirable to have additional feature branches that isolate specific changes to a certain branch. For example, a developer may be creating a new set of APIs to manage Azure in PowerShell Universal. In order to avoid breaking changes in the dev branch, developers will create their own feature branch that contains all their changes until it is complete enough to be merged into the development branch.&#x20;
 
 {% hint style="info" %}
-PowerShell Universal provides [developer licenses](../licensing.md) to avoid having to purchase a license for every developer on your team.&#x20;
+PowerShell Universal provides [developer licenses](../licensing.md) to avoid having to purchase a license for every developer on your team. Licenses would still be required for the production and staging environments.
 {% endhint %}
 
 In this type of configuration, local development is ideal because the developers will work on their local PowerShell Universal instance within their feature branch. When the feature is complete, they will create a Pull or Merge request in the source repository to move changes into the dev branch. Testing will be completed on the dev branch before merging to production.&#x20;
