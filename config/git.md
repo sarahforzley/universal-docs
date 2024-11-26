@@ -325,7 +325,7 @@ The other issue is that due to the way that PowerShell Universal watches files (
 
 ## Branching Strategies
 
-Branching strategies in git, often called git flow, dictate how changes are moved from one branch to another. Utilizing different types of branching strategies in PowerShell Universal can ensure that teams of different sizes can work effectively together in the platform.&#x20;
+Branching strategies in git dictate how changes are moved from one branch to another. Utilizing different types of branching strategies in PowerShell Universal can ensure that teams of different sizes can work effectively together in the platform.&#x20;
 
 ### Single Users and Small Teams
 
