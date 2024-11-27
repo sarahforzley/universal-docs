@@ -26,7 +26,7 @@ You can download files that are found in the published folder by visiting the re
 http://localhost:5000/src/test.txt
 ```
 
-You'll notice that unauthenticated requests cannot access the file.
+Notice that unauthenticated requests cannot access the file.
 
 ```powershell
 PS C:\src\universal\src> invoke-webrequest http://localhost:5000/src/test.txt
@@ -49,7 +49,7 @@ New-PSUPublishedFolder -Path C:\website -RequestPath /docs -DefaultDocument @("i
 Impersonation only works when using [Windows authentication](../api/security.md#authenticating-with-windows-authentication).
 {% endhint %}
 
-By default, when PSU accesses files to serve them to users, it does so as the service account the process is running as. To access files as the user that is downloading the file, you can turn on impersonation.&#x20;
+By default, when PSU accesses files to serve them to users, it does so using the same service account as the process. To access files as the user that is downloading the file, turn on impersonation.&#x20;
 
 ```powershell
 New-PSUPublishedFolder -Path C:\website -RequestPath /docs -DefaultDocument @("index.hml") -Impersonation
