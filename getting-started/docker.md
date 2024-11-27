@@ -236,7 +236,7 @@ services:
 
 #### Starting Containers using Compose Scripts
 
-Using a Terminal shell or PowerShell for Windows. cd to the directory with your `docker-compose.yml` script.
+Using a Terminal shell or PowerShell for Windows. Use the cd command to change the working directory with your `docker-compose.yml` script.
 
 Run the following command:
 
