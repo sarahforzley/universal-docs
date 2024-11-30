@@ -8,7 +8,7 @@ description: This page provides installation and configuration information for D
 
 ### Confirming Docker is installed correctly
 
-> __**NOTE:**__ Apple M1 devices: At the time of writing there are some issues on Apple M1 devices and, some ARM64/ARMv8 devices. Please review [this forum thread](https://forums.ironmansoftware.com/t/docker-image-not-working/8781/15) before proceeding.
+> **NOTE:** Apple M1 devices: At the time of writing there are some issues on Apple M1 devices and, some ARM64/ARMv8 devices. Please review [this forum thread](https://forums.ironmansoftware.com/t/docker-image-not-working/8781/15) before proceeding.
 
 #### Docker
 
@@ -278,12 +278,12 @@ Example Output:
  ⠿ Network PSU_default   Removed                                           0.4s
 ```
 
-#### Using Environment Variables and SQL Persistance
+#### Using Environment Variables and SQL Persistence
 
 You can add Environment variables into your Compose Scripts. Below is an example of:
 
 * Setting a node name
-* Adding SQL persistance
+* Adding SQL persistence
 * Adding a SQL Connection String
 
 ```yaml
@@ -299,6 +299,32 @@ services:
       - TZ=Europe/London
       - Plugins__0=SQL
       - Data__ConnectionString=Data Source=sql1.domain.com;Initial Catalog=PSUTicketBridge;User Id=psu_ticketbridge_dbo;Password=Password123;TrustServerCertificate=True;Trusted_Connection=True;integrated security=false;
+      - NodeName=mynodename
+    volumes:
+      - /docker/volumes/PSU:/root
+```
+
+#### Using Environment Variables and PostgreSQL Persistence
+
+You can add Environment variables into your Compose Scripts. Below is an example of:
+
+* Setting a node name
+* Adding PostgreSQL persistence
+* Adding a PostgreSQL Connection String
+
+```yaml
+version: "5.0"
+services:
+  PSU:
+    container_name: PSU
+    image: ironmansoftware/universal:latest
+    ports:
+      - 5000:5000
+    restart: unless-stopped
+    environment:
+      - TZ=Europe/London
+      - Plugins__0=PostgreSQL
+      - Data__ConnectionString=Host=PGhostname; Database=PGdatabase; User Id=PGusername; Password=PGpassword!;Port=5432
       - NodeName=mynodename
     volumes:
       - /docker/volumes/PSU:/root
@@ -373,6 +399,15 @@ ENV Data__ConnectionString=Data Source=ServerName; Initial Catalog=DatabaseName;
 ENV Plugins:0=SQL
 ```
 
+#### PostgreSQL
+
+To use PostgreSQL persistence, define the plugin and connection string as follows:
+
+```
+ENV Data__ConnectionString=Host=PGhostname; Database=PGdatabase; User Id=PGusername; Password=PGpassword!;Port=5432
+ENV Plugins:0=PostgreSQL
+```
+
 ### Time Zones
 
 To properly support time zones on Linux when scheduling jobs, include the `tzdata` package in your dockerfile along with an environment variable that specifies the server time zone.
@@ -387,12 +422,12 @@ RUN apt-get install -y tzdata
 We publish the following tags to Docker Hub:
 
 * latest - Current version using Ubuntu LTS
-* 4.x-preview-modules - Nightly build of version 4 using Ubuntu LTS and select AZ modules
+* 5.x-preview-modules - Nightly build of version 5 using Ubuntu LTS and select AZ modules
+* 5.x-preview-\<OS>-\<PS> - Nightly build of version 5 with the specified OS and PS version
 * 4.x-preview-\<OS>-\<PS> - Nightly build of version 4 with the specified OS and PS version
-* 3.x-preview-\<OS>-\<PS> - Nightly build of version 3 with the specified OS and PS version
-* 4.x-\<OS>-\<PS> - Production version 4 with the specified OS and PS version
-* 4.x-modules - Current production version on Ubuntu LTS with select AZ modules installed
-* 3.x-\<OS>-\<PS> - Current production version 3 with the specified OS and PS versions
+* 5.x-\<OS>-\<PS> - Production version 5 with the specified OS and PS version
+* 5.x-modules - Current production version on Ubuntu LTS with select AZ modules installed
+* 4.x-\<OS>-\<PS> - Current production version 4 with the specified OS and PS versions
 
 ### Included Modules
 
