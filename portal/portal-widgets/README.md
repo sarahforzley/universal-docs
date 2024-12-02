@@ -2,15 +2,13 @@
 description: Information about creating portal widgets.
 ---
 
-# Widgets
+# Portal Widgets
 
 Widgets are user interfaces blocks built with PowerShell and Blazor. You can create robust web-based used interfaces with minimal web development experience.&#x20;
 
-## Built In Widgets
+## Pre-built Widgets
 
-PowerShell Universal includes many built in widgets that you can easily add to your portal pages. Each widget can be resized, positioned and have its properties customized.&#x20;
-
-You can view a list of all the [built-in widgets here](https://ironmansoftware.com/powershell-universal/modules/widgets).&#x20;
+You can find widgets created by Ironman Software and community members on the [PowerShell Universal Gallery](../../gallery.md).&#x20;
 
 ## Custom Widgets
 
