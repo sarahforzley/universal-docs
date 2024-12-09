@@ -4,7 +4,7 @@ description: Schedule scripts to run in PowerShell Universal.
 
 # Schedules
 
-Schedules can be assigned to scripts and allow you to define frequency and other parameters for a script such as run as credentials.
+Assign schedules to scripts to define frequency and other parameters for a script, such as run as credentials.
 
 {% hint style="info" %}
 Schedules are stored in the `schedules.ps1` configuration file.
@@ -12,17 +12,17 @@ Schedules are stored in the `schedules.ps1` configuration file.
 
 ## Scheduling a Job
 
-To schedule a job, you can do so from the Automation / Schedules page and by clicking the New Schedule button. You can also schedule a script by click the Schedule option from the script's page.
+To schedule a job, go to the Automation / Schedules page and click the New Schedule button. To schedule a script, go to the script's page and click Schedule.
 
-Schedules can be defined based on simple selections like Every Minute or Every Hour or you can define CRON expressions yourself for more configurable schedules. You can also run One Time schedules that run once at a later date.
+You can define schedules based on simple selections like Every Minute or Every Hour, or you can define CRON expressions yourself for more configurable schedules. You can also run One Time schedules that run once at a later date.
 
-You can also define which user the scheduled job will run under as well as which PowerShell version to use.
+You can also define under which user the scheduled job runs, as well as which PowerShell version it uses.
 
 ![Create a Schedule](<../.gitbook/assets/image (101).png>)
 
 ### Simple Schedules
 
-Simple schedules are really just helpers for various standard CRON schedules. When you select one, it will define a CRON schedule for your script.
+Simple schedules are really just helpers for various standard CRON schedules. When you select one, it defines a CRON schedule for your script.
 
 ![](<../.gitbook/assets/image (159).png>)
 
@@ -40,7 +40,7 @@ One time schedules will run once in the future. You can select the time and day 
 
 ### Continuous
 
-Continuous schedules will run over and over again. You can define a delay between each scheduled job run.
+Continuous schedules run over and over again. You can define a delay between each scheduled job run.
 
 ![](<../.gitbook/assets/image (368).png>)
 
@@ -54,7 +54,7 @@ param($UserName)
 $UserName
 ```
 
-Within the modal for defining the schedule, you will have the option to set the parameter value.
+Within the modal for defining the schedule, you can set the parameter value.
 
 ![](<../.gitbook/assets/image (452).png>)
 
@@ -66,7 +66,7 @@ New-PSUSchedule -Script "MyScript.ps1" -Cron '* * * * *' -UserName 'adam'
 
 ## Environments
 
-When creating a schedule, you have the option to specify the [environment ](../config/environments.md)for your job to run. By default, it will use the default environment. You can define an environment in the UI by using the Environment drop down. You can define an environment using the `-Environment` parameter in `New-PSUSchedule`.
+When creating a schedule, you can specify the [environment](../config/environments.md) for your job to run. By default, it will use the default environment. You can define an environment in the UI by using the Environment drop down. You can define an environment using the `-Environment` parameter in `New-PSUSchedule`.
 
 ```powershell
 New-PSUSchedule -Script "MyScript.ps1" -Cron '* * * * *' -Environment '7.1'
@@ -74,7 +74,7 @@ New-PSUSchedule -Script "MyScript.ps1" -Cron '* * * * *' -Environment '7.1'
 
 ## Run As
 
-You can define which user to run the schedule as by using the Run As selector in the UI. The Run As selector contains a list of PSCredential [variables](../platform/variables.md) you have defined. You will need to define a PSCredential variable before the Run As selector is visible. By default, scheduled jobs will run under the credentials of the user that is running PowerShell Universal.
+You can define as which user to run the schedule by using the Run As selector in the UI. The Run As selector contains a list of PSCredential [variables](../platform/variables.md) you have defined. You need to define a PSCredential variable before the Run As selector is visible. By default, scheduled jobs run under the credentials of the user that is running PowerShell Universal.
 
 You can define a Run As user in a script by using the `-Credential` parameter. The value should be the name of the variable that contains your credential.
 
@@ -84,7 +84,7 @@ New-PSUSchedule -Script "MyScript.ps1" -Cron '* * * * *' -Credential 'MyUser'
 
 ## Computer
 
-You can select the computer or computers to run the schedule on. By default, schedules will run on any available computer. If you select All Computers, the schedule will run on all computers connect to the PSU cluster. If you select a specific computer, the schedule will run on only that computer.
+You can select the computer or computers on which to run the schedule. By default, schedules run on any available computer. If you select All Computers, the schedule runs on all computers connected to the PSU cluster. If you select a specific computer, the schedule runs on only that computer.
 
 ```powershell
 New-PSUSchedule -Script "MyScript.ps1" -Cron '* * * * *' -Computer 'PSUNODE1'
@@ -92,9 +92,9 @@ New-PSUSchedule -Script "MyScript.ps1" -Cron '* * * * *' -Computer 'PSUNODE1'
 
 ## Conditions
 
-Conditions can be defined that determine whether a schedule should be run. This is useful if you are using the same repository scripts for multiple environments. Currently, conditions cannot be defined within the admin console. Conditions are passed the current script and schedule as parameters. The condition scriptblock is run within the integrated environment.
+You can define conditions that determine whether a schedule should be run. This is useful if you are using the same repository scripts for multiple environments. Currently, conditions cannot be defined within the admin console. Conditions are passed to the current script and schedule as parameters. The condition scriptblock runs within the integrated environment.
 
-The condition needs to return true or false. Below is an example of a condition where the schedule will only run if there is an environment variable named `Slot` that contains the value `production`.
+The condition needs to return true or false. Below is an example of a condition where the schedule only runs if there is an environment variable named `Slot` that contains the value `production`.
 
 ```powershell
 New-PSUSchedule -Script "MyScript.ps1" -Cron '* * * * *' -Condition {
@@ -104,7 +104,7 @@ New-PSUSchedule -Script "MyScript.ps1" -Cron '* * * * *' -Condition {
 
 ## Pausing Schedules
 
-You can pause a schedule by setting the Paused property. When a schedule is paused, it will not run. This is useful to stop a schedule from running but not delete it.
+You can pause a schedule by setting the Paused property. When a schedule is paused, it does not run. This is useful to stop a schedule from running without deleting it.
 
 ## Time Out
 
